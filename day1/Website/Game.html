@@ -173,10 +173,15 @@
 			var PAUSE = 3;
 			var GAME_OVER = 4;
 			var state = START;
+			var difficulty = 0;
 
 			setInterval(function() {
 				controlState(ctx);
 			}, 10);
+
+			setInterval(function() {
+				difficulty = difficulty + 1;
+			}, 1000);
 
 			function controlState(ctx) {
 				switch(state) {
@@ -255,23 +260,65 @@
 				}
 				lastTime = new Date().getTime();
 				var n = parseInt(Math.random() * 10);
-				switch(n) {
-				case 0:
-				case 1:
-				case 2:
-				case 3:
-				case 4:
-				case 5:
-				case 6:
-				case 7:
-					enemies[enemies.length] = new Enemy(0, -51, 57, 51, 1, 1, 1, e1, 1);
-					break;
-				case 8:
-					enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
-					break;
-				case 9:
-					if (enemies[0] == undefined || enemies[0].type != 3) {
-						enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
+				if (difficulty < 120) {
+					switch(n) {
+					case 0:
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+					case 6:
+					case 7:
+						enemies[enemies.length] = new Enemy(0, -51, 57, 51, 1, 1, 1, e1, 1);
+						break;
+					case 8:
+						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
+						break;
+					case 9:
+						if (enemies[0] == undefined || enemies[0].type != 3) {
+							enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
+						}
+					}
+				} else if (difficulty >= 120 && difficulty < 300) {
+					switch(n) {
+					case 0:
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+						enemies[enemies.length] = new Enemy(0, -51, 57, 51, 1, 1, 1, e1, 1);
+						break;
+					case 6:
+					case 7:
+					case 8:
+						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
+						break;
+					case 9:
+						if (enemies[0] == undefined || enemies[0].type != 3) {
+							enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
+						}
+					}
+				} else if (difficulty >= 300) {
+					switch(n) {
+					case 0:
+					case 1:
+					case 2:
+					case 3:
+						enemies[enemies.length] = new Enemy(0, -51, 57, 51, 1, 1, 1, e1, 1);
+						break;
+					case 4:
+					case 5:
+					case 6:
+					case 7:
+						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
+						break;
+					case 8:
+					case 9:
+						if (enemies[0] == undefined || enemies[0].type != 3) {
+							enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
+						}
 					}
 				}
 			}
