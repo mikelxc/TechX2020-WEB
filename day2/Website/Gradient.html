@@ -19,6 +19,7 @@
     <body id = 'gradient'>
         <input id = "first" name="Color Picker" value = "#93B874" type="color"/>
         <input id = "second" name="Color Picker" value = "#C9DCB9" type="color"/>
+        <button onclick="refresh()">Return to default</button>
         <script>
             var firstInput = document.getElementById("first");
             var firstColor = firstInput.value;
@@ -35,6 +36,10 @@
                 secondColor = secondInput.value;
                 document.getElementById('gradient').style.setProperty('background', `linear-gradient(to right, ${firstColor}, ${secondColor})`);
             }, false);
+
+            refresh = function() {
+                location.reload();
+            }
         </script>
     </body>
 </html>
