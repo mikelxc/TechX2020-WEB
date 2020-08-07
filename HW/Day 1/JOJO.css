@@ -1,0 +1,42 @@
+#main {
+    background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596730145291&di=6e51c41bb50cf4d725a065a8f81744be&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fbaike%2Fc0%253Dbaike60%252C5%252C5%252C60%252C20%2Fsign%3Dd2c02a2b83025aafc73f76999a84c001%2Fd439b6003af33a87ea836cf1c75c10385243b56a.jpg) center 0;
+}
+
+.image {
+    width:200px;
+    height:200px;
+    border-radius:200px;
+}
+
+.Content {
+    display: flex;
+}
+
+
+.PersonalInfo {
+    flex: 1;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.PersonalExpe {
+    flex: 2;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.Info {
+    display: flex;
+}
+
+.InfoOne {
+    flex-direction: column;
+    flex: 1;
+}
+
+.InfoTwo {
+    flex-direction: column;
+    flex: 4;
+}
+
+p{
+    text-indent:2em;
+}
