@@ -8,11 +8,7 @@
                 min-height: 100%;
             }
             body {
-                background: -webkit-linear-gradient(left, #93B874, #C9DCB9); 
-                background: -o-linear-gradient(right, #93B874, #C9DCB9); 
-                background: -moz-linear-gradient(right, #93B874, #C9DCB9); 
                 background: linear-gradient(to right, #93B874, #C9DCB9); 
-                background-color: #93B874; 
             }
             #first {
                 margin-top: 300px;
@@ -24,7 +20,11 @@
         <input id = "first" name="Color Picker" type="color"/>
         <input id = "second" name="Color Picker" type="color"/>
         <script>
-
+            var theInput = document.getElementById("first");
+            var theColor = theInput.value;
+            theInput.addEventListener("input", function() {
+                console.log(theColor);
+            }, false);
         </script>
     </body>
 </html>
