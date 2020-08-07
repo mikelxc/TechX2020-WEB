@@ -42,4 +42,14 @@
         display:flex;
         justify-content: space-evenly;
     }
+    .buto {
+        display:flex;
+        justify-content: space-evenly;
+    }
+    .cb, .exp {
+        background-color:#7B241C;
+        width:300px;
+        color:white;
+        font-size:25px;
+    }
     

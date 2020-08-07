@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="csC.css">
+    <script type="text/javascript">
+        function change(){
+            var colorA=document.getElementById("c1");
+            var colorB=document.getElementById("c2");
+            document.body.style.background=`linear-gradient(to right, ${colorA.value}, ${colorB.value} )`;}
+    </script>
+    <title>Change Color</title>   
+  </head>
+<body>
+    <div class="l1">
+      <input id="c1" type="color" name="color" onchange="changeColor(this.value)">
+      <input id="c2" type="color" name="color" onchange="changeColor(this.value)">
+    </div>
+    <button type="button" class="set" onclick="change()">Change</button>
+</body>
+</html>

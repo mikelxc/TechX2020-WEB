@@ -4,7 +4,15 @@
 <link rel="stylesheet" type="text/css" href="cssF.css">
 <title>Behavioral Change</title>
 </head>
-<body>
+<bodyt>
+    <script>
+        function fun1(){
+            document.body.style.backgroundColor="#5D6D7E";
+        }
+        function jump(){
+            window.location.href="";
+        }
+    </script>
     <h1>Concepts about Behavioral Change</h1>
     <div class="Itro">
         <p>The latest thinking on social networks explains why new technologies and innovative behaviors really spread. It's not about going 'viral'.</p>
@@ -34,6 +42,11 @@
         </div>
     </div>
     <p></p>
-    <a href="https://sloanreview.mit.edu/article/the-truth-about-behavioral-change/">Click here to learn more!</a>
+    <a id="changePoint" href="https://sloanreview.mit.edu/article/the-truth-about-behavioral-change/">Want to learn more?</a>
+    <p></p>
+    <div class="buto">
+        <button type="button" onclick="fun1()" class="cb">click to change the background</button>
+        <button type="button" class="exp" onclick="jump()">click to share your experience</button>
+    </div>
 </body>
 </html>
