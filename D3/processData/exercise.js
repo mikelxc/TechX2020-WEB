@@ -56,7 +56,7 @@ const countriesData = require('./data.json');
 
 // 1- 请找出治愈人数最多的国家
 
-// Please write your code below
+// TODO: Please write your code below
 
 
 // 2- 排序
@@ -80,12 +80,12 @@ arr.sort(sortby);
 
 // 习题：请对countriesData根据今天的新确诊人数(countriesData[i].confirmAdd)进行降序排序。
 
-// Please write your code below
+// TODO: Please write your code below
 
 
 // 习题：请在countriesData中为各个国家添加死亡比例deathRate字段(累计死亡人数/累计确诊人数人数)并进行降序排序
 
-// Please write your code below
+// TODO: Please write your code below
 
 
 // 3- 高阶函数
@@ -96,14 +96,14 @@ arr.sort(sortby);
 // 返回值是一个sortby函数，有参数：data, key,  function valuefunc(object)
 // 然后用getSortBy生成一个"healingRate"字段(heal/confirm)，并根据这个字段降序排序。
 
-// Please write your code below
+// TODO: Please write your code below
 
 
 
 // 4- 我们只需要北美洲的信息
 // 习题：请创建dataAmerica对象，使其中只包含北美的信息。
 
-// Please write your code below
+// TODO: Please write your code below
 
 
 // Javascript中，有个很有用的函数，filter(callback)
@@ -115,7 +115,7 @@ const evens = numbers.filter(item => item % 2 == 0);
 console.log(evens); // [2,4]
 
 // 请用这种方式实现同样的功能
-// Please write your code below
+// TODO: Please write your code below
 
 // 5- Map 函数
 // map 函数：
@@ -127,4 +127,6 @@ const doubled = numbers.map(double);
 console.log(doubled); // [2, 4, 6, 8]
 
 // 习题：请用map生成一个只包含json中各个国家名字的list
+// TODO: Please write your code below
+
 
