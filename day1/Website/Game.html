@@ -312,9 +312,9 @@
 					case 5:
 					case 6:
 					case 7:
+					case 8:
 						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
 						break;
-					case 8:
 					case 9:
 						if (enemies[0] == undefined || enemies[0].type != 3) {
 							enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
@@ -331,10 +331,10 @@
 					case 4:
 					case 5:
 					case 6:
-						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
-						break;
 					case 7:
 					case 8:
+						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
+						break;
 					case 9:
 						if (enemies[0] == undefined || enemies[0].type != 3) {
 							enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
@@ -343,18 +343,16 @@
 				} else if (difficulty >= 120) {
 					switch(n) {
 					case 0:
-						enemies[enemies.length] = new Enemy(0, -51, 57, 51, 1, 1, 1, e1, 1);
-						break;
 					case 1:
 					case 2:
 					case 3:
 					case 4:
-						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
-						break;
 					case 5:
 					case 6:
 					case 7:
 					case 8:
+						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
+						break;
 					case 9:
 						if (enemies[0] == undefined || enemies[0].type != 3) {
 							enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
@@ -386,7 +384,7 @@
 				ctx.font = "20px 微软雅黑";
 				ctx.fillText("SCORE:" + score, 10, 20);
 				ctx.fillText("LIFE:" + heroes, 400, 20);
-				ctx.fillText("DIFFICULTY:" + difficulty, 300, 80);
+				ctx.fillText("DIFFICULTY:" + difficulty, 330, 60);
 			}
 
 			function Sky() {
@@ -506,7 +504,7 @@
 				FlyingObject.call(this, x, y, width, height, life, frames, baseFrameCount);
 				this.x = 480 / 2 - this.width / 2;
 				this.y = 650 - this.height - 30;
-				this.shootInterval = 300;
+				this.shootInterval = 400;
 				this.shootLastTime = 0;
 				this.shoot = function() {
 					if (!isActionTime(this.shootLastTime, this.shootInterval)) {
