@@ -173,7 +173,7 @@
 			var PAUSE = 3;
 			var GAME_OVER = 4;
 			var state = START;
-			var difficulty = 0;
+			var difficulty;
 
 			setInterval(function() {
 				controlState(ctx);
@@ -225,6 +225,7 @@
 			canvas.onclick = function() {
 				if (state == START) {
 					state = RUNNING;
+					difficulty = 0;
 				}
 				if (state == GAME_OVER) {
 					window.location.reload();
