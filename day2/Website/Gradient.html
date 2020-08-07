@@ -20,6 +20,9 @@
             #linear {
                 margin-left: 500px;
             }
+            #inflect {
+                margin-left: 607px;
+            }
         </style>
     </head>
     <body id = 'gradient'>
@@ -30,6 +33,8 @@
         </br>
         <button id="linear" onclick="linear()">Horizontal Gradient</button>
         <button id="circular" onclick="circular()">Radial Gradient</button>
+        </br>
+        <button id="inflect" onclick="inflect()">Inflect</button>
         <script>
             var firstInput = document.getElementById("first");
             var firstColor = firstInput.value;
@@ -64,6 +69,18 @@
                 type1 = "radial-gradient";
                 type2 = "circle";
                 document.getElementById('gradient').style.setProperty('background', `${type1}(${type2}, ${firstColor}, ${secondColor})`);
+            }
+
+            inflect = function() {
+                if(type2 == "to right") {
+                    type1 = "linear-gradient";
+                    type2 = "to left";
+                    document.getElementById('gradient').style.setProperty('background', `${type1}(${type2}, ${firstColor}, ${secondColor})`);
+                } else {
+                    type1 = "linear-gradient";
+                    type2 = "to right";
+                    document.getElementById('gradient').style.setProperty('background', `${type1}(${type2}, ${firstColor}, ${secondColor})`);
+                }
             }
         </script>
     </body>
