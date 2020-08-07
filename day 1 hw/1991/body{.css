@@ -1,0 +1,10 @@
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+    width: 50%;
+  }
