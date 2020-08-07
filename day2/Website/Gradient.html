@@ -17,13 +17,13 @@
         </style>
     </head>
     <body id = 'gradient'>
-        <input id = "first" name="Color Picker" type="color"/>
-        <input id = "second" name="Color Picker" type="color"/>
+        <input id = "first" name="Color Picker" value = "#93B874" type="color"/>
+        <input id = "second" name="Color Picker" value = "#C9DCB9" type="color"/>
         <script>
             var firstInput = document.getElementById("first");
             var firstColor = firstInput.value;
             firstInput.addEventListener("input", function() {
-                document.getElementById('gradient').style.setProperty(`background', 'linear-gradient(to right, ${firstColor}, ${secondColor})`);
+                document.getElementById('gradient').style.setProperty('background', `linear-gradient(to right, ${firstColor}, ${secondColor})`);
             }, false);
 
             var secondInput = document.getElementById("second");
