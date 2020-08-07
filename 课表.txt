@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+<title>
+LSN的课表
+</title>
+<style >
+body{background:#fff8dc;}
+table tr td,th{border:1px solid #3A5FCD;
+	     font-size:30px;
+	     font-style:italic;
+	     line-height:5em;}
+</style>
+</head>
+<body>
+<table>
+<tbody>
+<tr>
+<th>节次</th>
+<th>周一</th>
+<th>周二</th>
+<th>周三</th>
+<th>周四</th>
+<th>周五</th>
+</tr>
+<tr>
+<th>第一节</th>
+<th></th>
+<th>高级英语</th>
+<th>军事理论与训练</th>
+<th>高等数学</th>
+<th>人文社科经典</th>
+</tr>
+<tr>
+<th>第二节</th>
+<th></th>
+<th>高等数学</th>
+<th>物联网导论</th>
+<th>篮球</th>
+<th>电路与电子学基础</th>
+</tr>
+<tr>
+<th>第三节</th>
+<th>认知过程的信息处理</th>
+<th>计算机科学导论</th>
+<th>思想道德修养与法律基础</th>
+<th></th>
+<th>软件技术基础</th>
+</tr>
+
+</tbody>	
+</table>
+
+</body>
+
+</html>

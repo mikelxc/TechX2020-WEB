@@ -1,0 +1,92 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8">        //格式为utf—8
+<style>
+body{background:#fff8dc;}		/*设置背景颜色*/
+span{
+	color:#4169E1;
+	font-size:29px;
+	}	
+.al{		                    //标签（4个大标签）的样式525252
+		top:100px;
+		float:left;
+		margin:30px;
+		width:300px;
+		height:390px;
+		font-size:20px;
+		font-style:italic;
+		font-weight:bold; 
+		line-height:2em;	}
+.p1{		float:left;
+		margin:10px 150px;
+		width:60px;
+		height:60px;
+		}
+	#nanfengnan{
+		padding-top:50px;
+		padding-left:50px;
+		font-style:italic;
+		font-weight:bold;
+		font-size:36px;		/*设置南风喃字体样式*/
+}	
+	#a{				/*自我介绍板块*/
+		background:#EEC591;
+		font-size:20px;
+		color:#4876FF;}
+	#b{	background:#d1eeee;				<!--兴趣板块-->
+		border:2px solid red;}
+	#c{	background:#CDC673;			<!--家乡板块-->
+		border:2px solid red;}
+	#d{	background:#8ee5ee;				<!--联系板块-->
+		}
+	#course{
+		position:absolute;
+		right:50px;
+		bottom:-40px;
+		width:400px;
+		height:100px;
+		font-style:italic;
+		font-weight:bold;
+		font-size:30px;
+		color:#FFF5EE;}
+</style>
+<title>
+	LSN's personal webside
+</title>
+</head>
+<body>
+<div id="nanfengnan" >
+		South wind's Whispering~
+</div>
+<hr width=500   align="left" color=skyblue/>
+<div class="p1"><img src="nan.jpg"></div>
+<div class="p1"><img src="nan.jpg"></div>
+<div class="p1"><img src="nan.jpg"></div>
+<div class="p1"><img src="nan2.jpg"width="200px" height="220px"></div>
+<div id="a" class="al">					<!-- 自我介绍板块-->
+		<h1 > &nbspA&nbspBrief Introduction</h1><hr color="pink"/>
+		<p><span>LSN</span>,born in 2000.12.15, zodiac sign is Dragon, constellation(星座) is sagittarius(射手).An IT farmer with a
+romantic soul deep in his mind~</p>
+	</div>
+	<div id="b" class="al">
+		<h1>Hobbies</h1><hr color="pink"/>
+	<p>Playing guitar,playing basketball,LOLing<br/><br/>
+	My rank:<span>Glory gold</span>  in Noxus<br/><br/>
+	My works:<br/><br/><audio src="南山南.m4a" controls="controls"></audio>
+	
+</p>
+	</div>
+	<div id="c" class="al">
+		<h1>Hometown</h1><hr/ color="pink">
+	<p>Meizhou,a small city lies in eastern Guangdong<br/>
+	The biggest settlements of Hakkas</p>
+	</div>
+	<div id="d" class="al">
+		<h1>Contact Me</h1><hr color="pink"/>
+		Wechat qr code:<br/><img src="D:\html组图\qr.jpg" width="100" height="100"><br/>
+		tel:13539153276 <br/>qq:2767511634</div>
+	
+	<div id="course"><a href="课表.html">Here's My Course List~</a></div>
+	
+</body>
+</html>
