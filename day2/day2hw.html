@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+    <link>
+    <title>Day2 Homework Linear Color Gradient</title>
+    <meta name = "viewport" content = "width= device-width,
+    initial-scale = 1">
+    <style>
+        .center{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class = "center">
+    <p id = "color1;" style="color: white;">color1: <input type = "color" id="color1"></p>
+    <p id = "color2;" style="color: white;">color2: <input type = "color" id="color2"></p>
+    <button id = "button">Reset to Default</button>
+</div>
+<script>
+document.getElementById("color1").addEventListener("change",colorchange);
+document.getElementById("color2").addEventListener("change",colorchange);
+console.log(colorchange());
+function colorchange(){
+    let x = document.getElementById("color1").value;
+    let y = document.getElementById("color2").value;
+    document.body.style.background = `linear-gradient(45deg, ${x}, ${y})`;
+}
+document.getElementById('button').onclick = function(){
+    resetDefault();
+}
+function resetDefault(){
+    document.body.style.background = "linear-gradient(45deg,#0a0808, #692121)";
+};
+
+</script>
+</body>
+</html>
