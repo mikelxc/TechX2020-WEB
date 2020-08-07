@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+    </head>
+    <style>
+        body{
+            background: linear-gradient(45deg,#f69d3c, #3f87a6);
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+    </style>
+    <body>
+        <div class = "container">
+            <p>color 1: <input type = "color" id = "hex1" value = #f69d3c></p>
+            <p>color 2: <input type = "color" id = "hex2" value = #3f87a6></p>
+            <button type = "button" style = "background-color: chartreuse;" id = "button">
+                Reset to default
+            </button>
+            <br>
+            <button type = "button" style = "background-color: chartreuse;" id = "button1">
+                Color swap
+            </button>
+        </div>
+        <script>
+            document.getElementById("hex1").addEventListener("change",colorchange)
+            document.getElementById("hex2").addEventListener("change",colorchange)
+            console.log(colorchange())
+            function colorchange(){
+                let x = document.getElementById("hex1").value;
+                let y = document.getElementById("hex2").value;
+                document.body.style.background = `linear-gradient(45deg,${x},${y})`;
+            }
+            document.getElementById("button").onclick = function (){defaultColor()}
+            function defaultColor(){
+                document.body.style.background = "linear-gradient(45deg,#f69d3c, #3f87a6)";
+            }
+            document.getElementById("button1").onclick = function (){colorSwap()}
+            function colorSwap(){
+                let a = document.getElementById("hex1").value;
+                let b = document.getElementById("hex2").value;
+                document.body.style.background = `linear-gradient(45deg,${b},${a})`;
+            }
+        </script>
+    </body>
+</html>

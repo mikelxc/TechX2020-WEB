@@ -100,7 +100,7 @@
    
   <div class="navbar">
     <a href="#academics">Academics</a>
-    <a href="#activities">Activities</a>
+    <a id = "idk" href="#activities">Activities</a>
     <a href="#famFriends">Family and Friends</a>
     <a href="#contact" class="right">Contact</a>
   </div>
@@ -149,3 +149,19 @@
     </body>
     
   </html>
+
+
+  <!--Optional Javascript-->
+  <script>
+      console.log(triple(3))
+      function triple(x){
+          y = 3*x;
+          return y;
+      }
+      let link = document.getElementById("idk")
+      console.log(link);
+      function move(element,top,left){
+          element.style.top = top +"px"
+          element.style.left = left + "px"
+      }
+  </script>
