@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+a {
+  color: #050505;
+  text-decoration: none;
+}
+input {
+  border: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 页面头部分 */
+body {
+  background-color: #f3f5f7;
+}
+header {
+  height: 100px;
+  overflow: hidden;
+}
+nav {
+  width: 1366px;
+  height: 42px;
+  margin: 26px auto;
+}
+.logo {
+  float: left;
+}
+.navbar {
+  float: left;
+  height: 42px;
+  line-height: 42px;
+  margin-left: 50px;
+}
+.navbar li {
+  float: left;
+}
+.navbar li a {
+  padding: 0 10px;
+  display: block;
+  height: 42px;
+}
+.navbar li a:hover {
+  border-bottom: 2px solid #00a4ff;
+}
+
+/* 搜索框部分开始 */
+.search {
+  width: 410px;
+  height: 38px;
+  border: 1px solid #00a4ff;
+  float: right;
+}
+.search input[type="text"] {
+  /* 属性选择器  type 为 text 的文本框 */
+  /* background-color: pink; */
+  width: 360px;
+  height: 38px;
+  padding-left: 20px;
+  float: left;
+}
+.search input[type="submit"] {
+  /* 属性选择器  type 为 submit 的文本框 */
+  width: 50px;
+  height: 38px;
+  float: left;
+  background: #00a4ff url(images/search_06.png) center center no-repeat;
+}
+/* 搜索框部分结束 */
+/* 个人中心开始 */
+.personal {
+  float: right;
+  height: 42px;
+  line-height: 42px;
+}
+.personal img {
+  margin: 0 8px;
+}
+/* 个人中心结束 */
+/* banner start */
+.banner {
+  height: 420px;
+  background-color: #1c036c;
+}
+.banner-in {
+  height: 420px;
+  background: url(images/banner_03.png) 0 0 no-repeat;
+  position: relative;
+}
+.slidebar {
+  height: 420px;
+  width: 190px;
+  background: rgba(0, 0, 0, 0.3);
+  float: left;
+}
+.slidebar li a {
+  color: #fff;
+  font-size: 14px;
+  padding: 0 20px;
+  display: block;
+  line-height: 45px;
+}
+.slidebar li a:hover {
+  color: #00a4ff;
+}
+.slidebar a span {
+  float: right;
+  font-family: arial;
+}
+
+/* 小圆点模块 */
+.circle {
+  width: 180px;
+  height: 22px;
+  /* background-color: pink; */
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -90px; /* 水平居中算法 */
+}
+.circle li {
+  /*  0011 权重 */
+  float: left;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 6px 8px;
+  border-radius: 50%;
+}
+.circle .current {
+  width: 19px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+/* banner end */
