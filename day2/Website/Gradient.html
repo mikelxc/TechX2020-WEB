@@ -22,13 +22,17 @@
         <script>
             var firstInput = document.getElementById("first");
             var firstColor = firstInput.value;
-            firstInput.addEventListener("input", function() {
+            firstInput.addEventListener("change", function() {
+                firstInput = document.getElementById("first");
+                firstColor = firstInput.value;
                 document.getElementById('gradient').style.setProperty('background', `linear-gradient(to right, ${firstColor}, ${secondColor})`);
             }, false);
 
             var secondInput = document.getElementById("second");
             var secondColor = secondInput.value;
-            secondInput.addEventListener("input", function() {
+            secondInput.addEventListener("change", function() {
+                secondInput = document.getElementById("second");
+                secondColor = secondInput.value;
                 document.getElementById('gradient').style.setProperty('background', `linear-gradient(to right, ${firstColor}, ${secondColor})`);
             }, false);
         </script>
