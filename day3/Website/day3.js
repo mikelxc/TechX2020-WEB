@@ -76,3 +76,8 @@ function wrap(x) {
 }
 let warp1 = wrap(1);
 //console.log(warp1());
+
+let student = {};
+student.name = "Freddie";
+student.printName = function(name) {console.log("Hello " + name);}
+student.printName(student.name);
