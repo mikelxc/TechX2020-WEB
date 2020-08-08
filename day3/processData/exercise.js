@@ -45,7 +45,7 @@ jsObj['name'] = "cxk"
 // 遍历JSON对象时可以使用for ... in ...语法
 
 for (let key in jsObj) {
-    console.log(key + " is " + jsObj[key]);
+    //console.log(key + " is " + jsObj[key]);
 };
 
 // 想象你需要做一个统计新冠肺炎全球（除中国以外）感染数据的网站。为此，你从腾讯的API获取了感染数据的JSON。现在你需要对这些数据进行处理，以便使用。
