@@ -37,6 +37,8 @@ const str = JSON.stringify(jsObj)
 
 // 添加或者更改都可以直接在Object上操作
 
+jsObj.abc = 1
+
 // 添加
 jsObj.age = 19
 // 更改
