@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="EN">
+    <head>
+        <title>gradient</title>
+    <style>
+    #grad{
+        height:800px;
+        width:1500px;
+        background-image: linear-gradient(150deg,red,blue);
+        float:center
+    }
+    #pos{
+        height:100px;
+        width:100px;
+        margin: 0;
+        position:absolute;
+        top:400px;
+        left:750px;
+    }
+    </style>
+
+    <script>
+    var x = '#FF0000'
+    var y = '#0000FF'
+    function pickcolor(){
+        var x = document.getElementById("ColorL").value;
+    }
+    function pickcolor2(){
+        var y = document.getElementById("ColorR").value;
+    }
+    function pickcolor3(){
+        var x = document.getElementById("ColorL").value;
+        var y = document.getElementById("ColorR").value;
+        return "var(c)"== "linear-gradient(150deg,+var x+,+var y+)""
+    }
+
+    </script>
+    </head>
+
+    <body type="text" id="grad" background-image="var(c)">
+        <div id=pos>
+            <br><font color="white"> Pick Urs</font>
+            <br>
+            <br><input type="color" id="ColorL" oninput="pickcolor3()">
+            <input type="color" id="ColorR" oninput="pickcolor3()">
+            <input type="button" value="reset" onclick="history.go(0)">
+        </div>
+    </body>
+
+</html>
