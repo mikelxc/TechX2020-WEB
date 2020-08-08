@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title id="Gradient">Gradient</title>
+    <style>
+        .margin {
+            width: 75px;
+        }
+
+        .groundcolor {
+            height: 1920px;
+        }
+    </style>
+    <script>
+        function handleclick() {
+            let a = document.getElementsByClassName("groundcolor")[0];
+            a.style.background = `linear-gradient(to bottom right, white, white)`;
+        }
+        function change() {
+            let c1 = document.getElementById("color1").value;
+            let c2 = document.getElementById("color2").value;
+            let t = document.getElementsByClassName("groundcolor")[0];
+            t.style.background = `linear-gradient(to bottom right, ${c1}, ${c2})`;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="groundcolor">
+        <h2 align="center">1st color: <input class="margin" type="color" id="color1" onchange="change()"></h2>
+        <h2 align="center">2nd color: <input class="margin" type="color" id="color2" onchange="change()"></h2>
+        <h2 align="center">Undo: <button onclick="handleclick()">Defult</button></h2>
+    </div>
+</body>
+
+</html>
