@@ -26,3 +26,13 @@ arraySum = function(targetArray) {
     console.log(sum);
 }
 arraySum(printNum(1, 10, 1));
+
+let plus = (x, y) => {
+    return x + y;
+}
+
+const square = x => x*x;
+
+console.log(plus(2, 2));
+
+console.log(square(6));
