@@ -56,7 +56,7 @@ let disintegrate = function(number) {
     return multiple;
 }
 let remain = newNumber - 5*disintegrate(newNumber);
-console.log(newNumber + " = " + disintegrate(newNumber) + " * 5 + " + remain);
+//console.log(newNumber + " = " + disintegrate(newNumber) + " * 5 + " + remain);
 let factorize = function(number) {
     if (number / 2 == parseInt(number/2)) {
         return "2 * " + number/2;
@@ -68,4 +68,4 @@ let factorize = function(number) {
         return "1 * " + number;
     }
 }
-console.log(newNumber + " = " + factorize(newNumber-3) + " + 3");
+//console.log(newNumber + " = " + factorize(newNumber-3) + " + 3");
