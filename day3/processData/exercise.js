@@ -66,7 +66,7 @@ for (let i = 0; i < countriesData.length; i++) {
         previous = countriesData[i].confirm;
     }
 }
-console.log(mostCases);
+//console.log(mostCases);
 
 // 2- 排序
 // 在javascript中，对数组可以进行排序。方法为：arrayObject.sort(sortby)
@@ -96,7 +96,7 @@ for (let j = 0; j < countriesData.length; j++) {
     newCases.push([countriesData[j].name, countriesData[j].confirmAdd]);
 }
 newCases.sort(sortby);
-console.log(newCases);
+//console.log(newCases);
 
 // 习题：请在countriesData中为各个国家添加死亡比例deathRate字段(累计死亡人数/累计确诊人数人数)并进行降序排序
 
@@ -107,7 +107,7 @@ for (let k = 0; k < countriesData.length; k++) {
     dRate.push([countriesData[k].name, countriesData[k].dead / countriesData[k].confirm]);
 }
 dRate.sort(sortby);
-console.log(dRate);
+//console.log(dRate);
 
 // 3- 高阶函数
 // 从以上的排序的例子不难发现，javascript支持将函数作为函数的参数使用。
@@ -126,6 +126,13 @@ console.log(dRate);
 
 // TODO: Please write your code below
 
+let dataAmerica = countriesData;
+for (let l = 0; l < countriesData.length; l++) {
+    if (dataAmerica[l].continent != '北美洲'){
+        dataAmerica.splice(dataAmerica[l]);
+    }
+}
+console.log(dataAmerica);
 
 // Javascript中，有个很有用的函数，filter(callback)
 // Takes in a callback function which takes in an item (of the array) and returns a boolean value. 
@@ -133,7 +140,7 @@ console.log(dRate);
 // 例
 const numbers = [1, 2, 3, 4];
 const evens = numbers.filter(item => item % 2 == 0);
-console.log(evens); // [2,4]
+//console.log(evens); // [2,4]
 
 // 请用这种方式实现同样的功能
 // TODO: Please write your code below
@@ -145,7 +152,7 @@ console.log(evens); // [2,4]
 // 例
 const double = (num) => (num * 2);
 const doubled = numbers.map(double);
-console.log(doubled); // [2, 4, 6, 8]
+//console.log(doubled); // [2, 4, 6, 8]
 
 // 习题：请用map生成一个只包含json中各个国家名字的list
 // TODO: Please write your code below
