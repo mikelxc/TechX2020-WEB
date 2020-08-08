@@ -50,10 +50,10 @@ let newArr = function(array) {
 }
 //console.log(newArr(arr));
 
-let newNumber = 13;
+let newNumber = 185;
 let disintegrate = function(number) {
     multiple = parseInt(number / 5);
     return multiple;
 }
 let remain = newNumber - 5*disintegrate(newNumber);
-console.log(disintegrate(newNumber) + "*5+" + remain);
+console.log(newNumber + " = " + disintegrate(newNumber) + " * 5 + " + remain);
