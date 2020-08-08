@@ -82,7 +82,7 @@ arr.sort();
 // sortby函数有两个input：a和b，规定a和b之间的比较方式。若根据比较规则，a<b (a应该在b之前)，则返回一个小于0的值；a=b则返回0；a>b则返回大于0的值。
 
 function sortby(a, b) {
-    return a - b;
+    return b - a;
 };
 arr.sort(sortby);
 // 输出：[2, 3, 4, 10, 12, 30, 42, 59, 100, 244, 7000]
@@ -91,6 +91,12 @@ arr.sort(sortby);
 
 // TODO: Please write your code below
 
+let newCases = [];
+for (let j = 0; j < countriesData.length; j++) {
+    newCases.push(countriesData[j].confirmAdd);
+}
+newCases.sort(sortby);
+console.log(newCases);
 
 // 习题：请在countriesData中为各个国家添加死亡比例deathRate字段(累计死亡人数/累计确诊人数人数)并进行降序排序
 
