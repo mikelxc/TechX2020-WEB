@@ -56,17 +56,13 @@ const countriesData = require('./data.json');
 
 // 1- 请找出治愈人数最多的国家
 // TODO: Please write your code below
-const max = countriesData.reduce(function (previous,current) {
-    return (previous.heal > current.heal) ?previous.name:current.name
-});
-
 let maxHeal = countriesData[23];
-for (;i<length;){
-    if (countriesData[i].heal > maxHeal.heal){
-        maxHeal = countriesData[i];
+for (let element of countriesData){
+    if (element.heal > maxHeal.heal){
+        maxHeal = element;
     }
 }
-console.log(maxHeal);
+console.log(maxHeal.name);
 
 // 2- 排序
 // 在javascript中，对数组可以进行排序。方法为：arrayObject.sort(sortby)
@@ -86,26 +82,34 @@ arr.sort()
 // 习题：请对countriesData根据今天的新确诊人数(countriesData[i].confirmAdd)进行降序排序。
 
 // TODO: Please write your code below
-for (;i<length;){
-    countriesData[i].confirmAdd.sort(function sortby(a,b){
-        return b - a;
-    });
-    console.log(countriesData[i],confirmAdd);
-}
+
+let dataCountries = countriesData.sort(function sortby(a,b){
+    return b.confirmAdd - a.confirmAdd;
+});
+let array = [];
+for (let i= 0; i < dataCountries.length; i ++){
+    array.push(dataCountries[i].confirmAdd);
+};
+console.log(array);
+
 
 
 // 习题：请在countriesData中为各个国家添加死亡比例deathRate字段(累计死亡人数/累计确诊人数人数)并进行降序排序
 
 // TODO: Please write your code below
-for (;i<length;){
-    countriesData[i].deathRate = countriesData[i].dead/countriesData[i].confirm;
+for (let element of countriesData){
+    element["deathRate"] = element.dead/element.confirm;
 }
-for (;i<length;){
-    countriesData[i].deathRate.sort(function sortby(a,b){
-        return b - a;
-    });
-    console.log(countriesData[i].deathRate);
-}
+
+let dRCountries = countriesData.sort(function sortby(a,b){
+    return b["deathRate"] - a["deathRate"];
+});
+
+let array1 = [];
+for (let i= 0; i < dRCountries.length; i ++){
+    array1.push(dRCountries[i]["deathRate"]);
+};
+console.log(array1);
 
 
 // 3- 高阶函数
@@ -113,13 +117,13 @@ for (;i<length;){
 // Javascript也支持将函数作为返回值使用。这种方便的操作就是高阶函数。上面使用的sort就是高阶函数。
 
 // 习题：要求写一个函数getSortBy。实现在一个json数组data内（例如countriesData），根据某种原则 valuefunc(object)，给所有对象添加一个值(key)，并返回以降序排序用的sortby函数。
-// 返回值是一个sortby函数，有参数：data, key,  function valuefunc(object)
+// 返回值是一个getSortby函数，有参数：data, key,  function valuefunc(object)
 // 然后用getSortBy生成一个"healingRate"字段(heal/confirm)，并根据这个字段降序排序。
 
 // TODO: Please write your code below
 function getSortBy(data, key, valuefunc){
-    for (;i<length;){
-        data[i].key = valuefunc(data[i]);
+    for (i = 0; i < countriesData.length; i++){
+        data[i][key] = valuefunc(data[i]);
     }
     return (a,b) => b[key] - a[key];
 }
@@ -147,9 +151,8 @@ console.log(dataAmerica);
 // Takes in a callback function, taking in an item, returning a modified item.
 // Returns an iterable on the same type with the modified items. 
 // 例
-const double = (num) => (num * 2);
-const doubled = numbers.map(double);
-console.log(doubled); // [2, 4, 6, 8]
+//const double = (num) => (num * 2);//const doubled = numbers.map(double);
+//console.log(doubled); // [2, 4, 6, 8]
 
 // 习题：请用map生成一个只包含json中各个国家名字的list
 // TODO: Please write your code below
