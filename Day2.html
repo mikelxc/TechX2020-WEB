@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Color</title>
+    <style>
+        
+            body {
+background: linear-gradient(135deg, orange 60%, cyan);
+}
+</style>       
+    </head>
+    <body>
+        <h1 class="title">
+        <center>
+            <h1> <p>The Color:</p></h1>
+            <div>
+                <input type="color" id="head" name="head"
+                    value="#e66465">
+                <label for="head">color1</label>
+            </div>
+            
+            <div>
+                <input type="color" id="body" name="body"
+                        value="#f6b73c">
+                <label for="body">color2</label>
+            </div>
+        </center>
+        <script>
+            var color1;
+var defaultColor = "#e66465";
+
+window.addEventListener("load", startup, false); 
+function startup() {
+color1 = document.querySelector("#color1");
+color1.value = defaultColor;
+color1.addEventListener("input", updateFirst, false);
+color1.addEventListener("change", updateAll, false);
+color1.select();
+}
+function updateFirst(event) {
+var p = document.querySelector("p");
+
+if (p) {
+    p.style.color = event.target.value;
+}
+}
+        
+        </script>
+
+    </body>
+</html>
