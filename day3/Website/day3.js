@@ -57,3 +57,17 @@ let disintegrate = function(number) {
 }
 let remain = newNumber - 5*disintegrate(newNumber);
 console.log(newNumber + " = " + disintegrate(newNumber) + " * 5 + " + remain);
+
+let anotherNumber = 20;
+let factorize = function(number) {
+    if (number / 2 == parseInt(number/2)) {
+        return "2 * " + number/2;
+    } else if (number / 3 == parseInt(number/3)){
+        return "3 * " + number/3;
+    } else if (number / 5 == parseInt(number/5)){
+        return "5 * " + number/5;
+    } else {
+        return "1 * " + number;
+    }
+}
+console.log(anotherNumber + " = " + factorize(anotherNumber-3) + " + 3");
