@@ -69,3 +69,10 @@ let factorize = function(number) {
     }
 }
 //console.log(newNumber + " = " + factorize(newNumber-3) + " + 3");
+
+function wrap(x) {
+    let local = x;
+    return () => local;
+}
+let warp1 = wrap(1);
+//console.log(warp1());
