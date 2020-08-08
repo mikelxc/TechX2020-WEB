@@ -94,8 +94,11 @@ countriesData.sort(sortbyConfirmAdd);
 // 习题：请在countriesData中为各个国家添加死亡比例deathRate字段(累计死亡人数/累计确诊人数人数)并进行降序排序
 
 // TODO: Please write your code below
+for(let element of countriesData){
+    element["deathRate"] = element.dead/element.confirm;
+}
 function sortbyDeathRate(a, b){
-    return b.dead/b.confirm - a.dead/a.confirm;
+    return b["deathRate"] - a["deathRate"];
 }
 countriesData.sort(sortbyDeathRate);
 
