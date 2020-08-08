@@ -48,4 +48,12 @@ let newArr = function(array) {
     }
     return newArr;
 }
-console.log(newArr(arr));
+//console.log(newArr(arr));
+
+let newNumber = 13;
+let disintegrate = function(number) {
+    multiple = parseInt(number / 5);
+    return multiple;
+}
+let remain = newNumber - 5*disintegrate(newNumber);
+console.log(disintegrate(newNumber) + "*5+" + remain);
