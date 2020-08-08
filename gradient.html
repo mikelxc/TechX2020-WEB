@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body{
+        background: linear-gradient(to bottom, #ccffcc 0%, #ff99cc 100%);
+        text-align:center;
+        padding-top:200px;
+    }
+    h1{
+        color:black;
+        animation: mymove 5s infinite;
+    }
+    @keyframes mymove {
+  from {color:green;}
+  to {color:pink;}
+}
+    
+</style>
+    </head>
+
+<body>
+
+    <h1>Color Gradient</h1>
+
+    <script>
+        function change(){
+      let first=document.getElementById("firstcolor").value;
+      let second=document.getElementById("secondcolor").value;
+      document.body.style.background=`linear-gradient(to bottom, ${first} 0%, ${second} 100%)`
+        }
+      
+      function setDefault(){
+          
+          document.body.style.background="linear-gradient(to bottom, #ccffcc 0%, #ff99cc 100%)"
+          document.getElementById("firstcolor").value="#ccffcc"
+          document.getElementById("secondcolor").value="#ff99cc"
+      }
+
+  </script>
+
+      <label for="favcolor">Select the first color:</label>
+      <input type="color" id="firstcolor" value="#ccffcc" onchange="change()"><br><br>
+      <label for="favcolor">Select the second color:</label>
+      <input type="color" id="secondcolor" value="#ff99cc" onchange="change()"><br><br>
+      
+    
+      
+    <button class="btn btn-outline-success" onclick="setDefault()">Set Default</button>
+
+</body>
+</html>
