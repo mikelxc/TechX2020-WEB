@@ -66,7 +66,7 @@ for (let i = 0; i < countriesData.length; i++) {
         previous = countriesData[i].confirm;
     }
 }
-//console.log(mostCases);
+console.log(mostCases);
 
 // 2- 排序
 // 在javascript中，对数组可以进行排序。方法为：arrayObject.sort(sortby)
@@ -96,7 +96,7 @@ for (let j = 0; j < countriesData.length; j++) {
     newCases.push([countriesData[j].name, countriesData[j].confirmAdd]);
 }
 newCases.sort(sortby);
-//console.log(newCases);
+console.log(newCases);
 
 // 习题：请在countriesData中为各个国家添加死亡比例deathRate字段(累计死亡人数/累计确诊人数人数)并进行降序排序
 
@@ -107,7 +107,7 @@ for (let k = 0; k < countriesData.length; k++) {
     dRate.push([countriesData[k].name, countriesData[k].dead / countriesData[k].confirm]);
 }
 dRate.sort(sortby);
-//console.log(dRate);
+console.log(dRate);
 
 // 3- 高阶函数
 // 从以上的排序的例子不难发现，javascript支持将函数作为函数的参数使用。
@@ -132,7 +132,7 @@ for (let l = 0; l < countriesData.length; l++) {
         dataAmerica.push(countriesData[l]);
     }
 }
-//console.log(dataAmerica);
+console.log(dataAmerica);
 
 // Javascript中，有个很有用的函数，filter(callback)
 // Takes in a callback function which takes in an item (of the array) and returns a boolean value. 
@@ -157,4 +157,6 @@ const doubled = numbers.map(double);
 // 习题：请用map生成一个只包含json中各个国家名字的list
 // TODO: Please write your code below
 
-
+const name = (countriesData) => (countriesData.name);
+const names = countriesData.map(name);
+console.log(names);
