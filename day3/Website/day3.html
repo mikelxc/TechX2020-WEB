@@ -10,7 +10,17 @@
     </head>
     <body>
         <script>
+            printNum = function(a, b, c) {
+                let start = a;
+                let end = b;
+                let gap = c;
+                let i;
 
+                for (i = start; i <= end; i += gap) {
+                    console.log(i);
+                }
+            }
+            printNum(100, 1000, 50);
         </script>
     </body>
 </html>
