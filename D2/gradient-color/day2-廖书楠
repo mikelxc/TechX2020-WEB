@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--day2的作业——廖书楠-->
+<html>
+  <head>
+    <script type="text/javascript">
+                document.body.style.background=`linear-gradient(to right, red, green )`;
+        function changeColor(){
+            var color1=document.getElementById("color1");
+            var color2=document.getElementById("color2");
+            document.body.style.background=`linear-gradient(to right, ${color1.value}, ${color2.value} )`;}
+    </script>
+
+    <style>
+        .sub{
+            margin-top: 10px;  
+        }
+        div{
+            width:200px;
+            height: 200px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            margin-top:50px;
+            margin-bottom:50px;
+            margin-left:-100px;
+            margin-top:-100px;
+        }     
+    </style>
+    <title>渐变背景色</title>   
+  </head>
+<body>
+    <div>
+      <input id="color1" type="color" name="color" class="sub">
+      <input id="color2" type="color" name="color" class="sub">
+      <input type="button" name="change" class="sub" value="更改背景颜色~"  onclick="changeColor()">
+    </div>
+    </body>
+</html>
