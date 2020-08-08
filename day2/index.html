@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>color picker</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #000, #fff);
+      }
+    </style>
+    <script>
+      // array?
+      console.log("別罵了別罵了，我是傻逼");
+      var color = {};
+      color[0] = '#000';
+      color[1] = '#fff';
+      function changeColor(input,i) {
+        color[i] = input;
+        document.querySelector("body").style.background =
+          "linear-gradient(to right, " +
+          color[0] +
+          ", " +
+          color[1] +
+          ")";
+      }
+    </script>
+  </head>
+
+  <body>
+    <form id="colorPicker">
+      <input id="c" type="color" name="color" defaultValue='#000' onChange="changeColor(this.value,0)" />
+      <input id="c" type="color" name="color" defaultValue="#fff" onChange="changeColor(this.value,1)" />
+      <button onClick="reset()">Reset</button>
+    </form>
+  </body>
+</html>

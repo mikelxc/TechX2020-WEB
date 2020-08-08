@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var color1;
+      function changeColor1(input) {
+        color1 = input;
+      }
+      function changeColor2(input) {
+        document.documentElement.style.setProperty('background-image','linear-gradient('+color1+','+input+')');
+      }
+    </script>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(undefined);
+      }
+    </style>
+  </head>
+  <body>
+    <label>Color Selector:
+      <input type="color" name="color" onChange="changeColor1(this.value)" />
+      <input type="color" name="color" onChange="changeColor2(this.value)" />
+    </label>
+  </body>
+</html>
