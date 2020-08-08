@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ColorPicker</title>
+        <script>                  
+            function buttonClick1(){  
+                document.getElementById('example1').style.background = "linear-gradient(white, white)";               
+            }  
+            function input(){  
+                // alert("ababab")              
+                var Color1 = document.getElementById("picker1").value;
+                var Color2 = document.getElementById("picker2").value;
+                var final =  "linear-gradient(" + color1 + ", " + color2 + ")";
+                document.getElementById('example1').style.background = final;               
+            }
+        </script>
+        <style>
+            #button1{
+                float: center;
+            }
+            #example1 {
+                background: linear-gradient(rgb(126, 71, 71), blue);         
+                background-position: right bottom, left top;
+                background-repeat: no-repeat, repeat;
+                height: 100%;
+                padding: 15px;
+            }
+            </style>
+    </head>
+    <body>
+        <div id="example1">
+            <div id="GroupColor" type="text" name="GroupColor" 
+                style="background-color: rgb(45, 49, 115);">
+            </div>
+            <input  id="button1" type="button" value="点击" onclick="buttonClick1();">  </h1>
+            <input id="picker1" type="color" value="#ff0000" onchange="input()" />
+            <input id="picker2" type="color" value="#ff0000" onchange="input()" />
+            </div>
+    </body>
+</html>
