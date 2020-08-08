@@ -50,15 +50,13 @@ let newArr = function(array) {
 }
 //console.log(newArr(arr));
 
-let newNumber = 185;
+let newNumber = 66;
 let disintegrate = function(number) {
     multiple = parseInt(number / 5);
     return multiple;
 }
 let remain = newNumber - 5*disintegrate(newNumber);
 console.log(newNumber + " = " + disintegrate(newNumber) + " * 5 + " + remain);
-
-let anotherNumber = 20;
 let factorize = function(number) {
     if (number / 2 == parseInt(number/2)) {
         return "2 * " + number/2;
@@ -70,4 +68,4 @@ let factorize = function(number) {
         return "1 * " + number;
     }
 }
-console.log(anotherNumber + " = " + factorize(anotherNumber-3) + " + 3");
+console.log(newNumber + " = " + factorize(newNumber-3) + " + 3");
