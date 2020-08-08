@@ -15,21 +15,29 @@
                 let end = b;
                 let step = c;
                 let i;
+                let array = [];
 
                 if (step > 0) {
                     for (i = start; i <= end; i += step) {
-                        console.log(i);
+                        array.push(i);
                     }
                 } else if (step < 0) {
                     for (i = start; i >= end; i += step) {
-                        console.log(i);
+                        array.push(i);
                     }
                 } else {
                     console.log("step cannot be 0");
                 }
-                
+                return array;
             }
-            printNum(1000, 100, -40);
+            arraySum = function(targetArray) {
+                let sum = 0;
+                for (let n = 0; n < targetArray.length; n++) {
+                    sum += targetArray[n];
+                }
+                console.log(sum);
+            }
+            arraySum(printNum(100, 0, -10));
         </script>
     </body>
 </html>
