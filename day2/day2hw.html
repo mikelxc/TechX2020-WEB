@@ -1,3 +1,4 @@
+<!--Weike Fang-->
 <!DOCTYPE html>
 <html lang = "en-US">
 <head>
@@ -6,6 +7,9 @@
     <meta name = "viewport" content = "width= device-width,
     initial-scale = 1">
     <style>
+        body{
+            background: linear-gradient(to right, #0a0808, #692121);
+        }
         .center{
             position:absolute;
             top: 50%;
@@ -17,25 +21,48 @@
 </head>
 <body>
 <div class = "center">
-    <p id = "color1;" style="color: white;">color1: <input type = "color" id="color1"></p>
-    <p id = "color2;" style="color: white;">color2: <input type = "color" id="color2"></p>
+    <h1 style="color:whitesmoke"><strong>Color Linear Gradient</strong></h1>
+    <p id = "color1;" style="color: white;">color1: 
+        <input type = "color" id="color1" onchange = "colorchange()"></p>
+    <p id = "color2;" style="color: white;">color2: 
+        <input type = "color" id="color2" onchange = "colorchange()"></p>
     <button id = "button">Reset to Default</button>
+    <br>
+    <br>
+    <button id = "direction" title = "Change Horizontal Direction">Change Direction</button>
 </div>
 <script>
 document.getElementById("color1").addEventListener("change",colorchange);
 document.getElementById("color2").addEventListener("change",colorchange);
-console.log(colorchange());
+let directionDefault = "left";
+//console.log(colorchange());
 function colorchange(){
-    let x = document.getElementById("color1").value;
-    let y = document.getElementById("color2").value;
-    document.body.style.background = `linear-gradient(45deg, ${x}, ${y})`;
+    let color1 = document.getElementById("color1").value;
+    let color2 = document.getElementById("color2").value;
+    document.body.style.background = `linear-gradient(to left, ${color1}, ${color2})`;
 }
 document.getElementById('button').onclick = function(){
     resetDefault();
 }
 function resetDefault(){
-    document.body.style.background = "linear-gradient(45deg,#0a0808, #692121)";
+    document.body.style.background = "linear-gradient(to right,#0a0808, #692121)";
 };
+document.getElementById('direction').onclick = function(){
+    changeDirection();
+}
+function changeDirection(){
+    let x = document.getElementById("color1").value;
+    let y = document.getElementById("color2").value;
+    if(directionDefault == "left"){
+        document.body.style.background = `linear-gradient(to right, ${x}, ${y})`;
+        directionDefault = "right";
+    }
+    else{
+        document.body.style.background = `linear-gradient(to left, ${x}, ${y})`;
+        directionDefault = "left";
+    }
+    
+}
 
 </script>
 </body>
