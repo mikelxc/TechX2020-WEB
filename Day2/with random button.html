@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Day 2</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      font-size: 15px;
+      text-align: center;
+      background: linear-gradient(to right, rgb(184, 97, 97), rgb(187, 187, 51));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+</head>
+
+<body class="gradient">
+  <form id="sth">
+    <div class="container">
+      <label>Color 1: </label>
+      <input class="color1" type="color" value="#B86161">
+
+      </br>
+      </br>
+      <label>Color 2: </label>
+      <input class="color2" type="color" value="#BBBB33">
+
+      </br>
+      </br>
+      
+      <button onClick="reset()" style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: 12px;">Reset to origin</button>
+      <button id="random" onchange="randomG()" style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: 12px;">random</button>
+      
+    </div>
+    <script>
+      var color1 = document.querySelector(".color1");
+      var color2 = document.querySelector(".color2");
+      var body = document.querySelector(".gradient");
+      var random = document.getElementById("random");
+      function setGradient() {
+        body.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value})`;
+      }
+      // function reset() {
+      //   body.style.background = "linear-gradient(to right, #B86161 , #BBBB33)";
+      // }
+      function randomC(){
+        var newC = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+        return newC;
+      }
+      function randomG(){
+          color1.value = randomC();
+          color2.value = randomC();
+          body.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value})`;
+      }
+
+      color1.addEventListener("input", setGradient)
+      color2.addEventListener("input", setGradient)
+      random.addEventListener("click", randomG)
+
+    </script>
+  </form>
+</body>
+
+</html>
