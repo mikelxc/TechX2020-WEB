@@ -102,6 +102,12 @@ console.log(newCases);
 
 // TODO: Please write your code below
 
+let dRate = [];
+for (let k = 0; k < countriesData.length; k++) {
+    dRate.push([countriesData[k].name, countriesData[k].dead / countriesData[k].confirm]);
+}
+dRate.sort(sortby);
+console.log(dRate);
 
 // 3- 高阶函数
 // 从以上的排序的例子不难发现，javascript支持将函数作为函数的参数使用。
