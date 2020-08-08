@@ -58,6 +58,15 @@ const countriesData = require('./data.json');
 
 // TODO: Please write your code below
 
+let mostCases;
+let previous = 0;
+for (let i = 0; i < countriesData.length; i++) {
+    if (countriesData[i].confirm > previous){
+        mostCases = countriesData[i].name;
+        previous = countriesData[i].confirm;
+    }
+}
+console.log(mostCases);
 
 // 2- 排序
 // 在javascript中，对数组可以进行排序。方法为：arrayObject.sort(sortby)
