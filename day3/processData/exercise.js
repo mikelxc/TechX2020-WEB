@@ -126,13 +126,13 @@ dRate.sort(sortby);
 
 // TODO: Please write your code below
 
-let dataAmerica = countriesData;
+let dataAmerica = [];
 for (let l = 0; l < countriesData.length; l++) {
-    if (dataAmerica[l].continent != '北美洲'){
-        dataAmerica.splice(dataAmerica[l]);
+    if (countriesData[l].continent === '北美洲'){
+        dataAmerica.push(countriesData[l]);
     }
 }
-console.log(dataAmerica);
+//console.log(dataAmerica);
 
 // Javascript中，有个很有用的函数，filter(callback)
 // Takes in a callback function which takes in an item (of the array) and returns a boolean value. 
