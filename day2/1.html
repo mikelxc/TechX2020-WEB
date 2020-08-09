@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>color picker</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #000, #fff);
+      }
+    </style>
+  </head>
+
+  <body class="main">
+    <label>
+      <input class="color1" type="color" />
+      <input class="color2" type="color" />
+      <button onClick="reset()">Reset</button>
+    </label>
+    <script>
+      // trial #1: eventListener + querySelector
+      var color1 = document.querySelector(".color1");
+      var color2 = document.querySelector(".color2");
+      var body = document.querySelector("body");
+      function changeGradient() {
+        body.style.background =
+          "linear-gradient(to right, " +
+          color1.value +
+          ", " +
+          color2.value +
+          ")";
+      }
+      function reset() {
+        body.style.background = "linear-gradient(to right, #000 , #fff)";
+      }
+      color1.addEventListener("input", changeGradient);
+      color2.addEventListener("input", changeGradient);
+      
+    </script>
+  </body>
+</html>

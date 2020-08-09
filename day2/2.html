@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>color picker</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #000, #fff);
+      }
+    </style>
+    <script>
+      // two functions....
+      var color1 = '#000';
+      function changeColor1(input) {
+        color1 = input;
+      }
+      function changeColor2(input) {
+        document.querySelector("body").style.background =
+          "linear-gradient(to right, " +
+          color1 +
+          ", " +
+          input +
+          ")";
+      }
+      function reset() {
+        document.querySelector("body").style.background = "linear-gradient(to right, #000 , #fff)";
+      }
+    </script>
+  </head>
+
+  <body>
+    <label>
+      <input type="color" name="color" onChange="changeColor1(this.value)" />
+      <input type="color" name="color" onChange="changeColor2(this.value)" />
+      <button onClick="reset()">Reset</button>
+    </label>
+  </body>
+</html>
