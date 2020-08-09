@@ -76,15 +76,10 @@
             }
 
             inflect = function() {
-                if(type2 == "to right") {
-                    type1 = "linear-gradient";
-                    type2 = "to left";
-                    document.getElementById('gradient').style.setProperty('background', `${type1}(${type2}, ${firstColor}, ${secondColor})`);
-                } else {
-                    type1 = "linear-gradient";
-                    type2 = "to right";
-                    document.getElementById('gradient').style.setProperty('background', `${type1}(${type2}, ${firstColor}, ${secondColor})`);
-                }
+                let color2 = firstColor;
+                firstColor = secondColor;
+                secondColor = color2;
+                document.getElementById('gradient').style.setProperty('background', `${type1}(${type2}, ${firstColor}, ${secondColor})`);
             }
         </script>
     </body>
