@@ -93,18 +93,20 @@ function sortby2(a,b){
     return b.confirmAdd-a.confirmAdd;
 }
 countriesData.sort(sortby2);
+console.log(countriesData);
 
 // 习题：请在countriesData中为各个国家添加死亡比例deathRate字段(累计死亡人数/累计确诊人数人数)并进行降序排序
 
 // TODO: Please write your code below
 
-for (let key in countriesData) {
-    countriesData[key].deathRate=countriesData[key].dead/countriesData[key].confirm;
+for (let key of countriesData) {
+    key.deathRate=key.dead/key.confirm;
 };
 function sortby3(a,b){
     return b.deathRate-a.deathRate;
 }
-countriesData.sort(sortby2);
+countriesData.sort(sortby3);
+console.log(countriesData);
 
 // 3- 高阶函数
 // 从以上的排序的例子不难发现，javascript支持将函数作为函数的参数使用。
@@ -114,21 +116,21 @@ countriesData.sort(sortby2);
 // 返回值是一个sortby函数，有参数：data, key,  function valuefunc(object)
 // 然后用getSortBy生成一个"healingRate"字段(heal/confirm)，并根据这个字段降序排序。
 // TODO: Please write your code below
-
-function getSortBy(data,key,valuefunc){
-    for (let key in countriesData) {
-        data[key].key=valuefunc(key);
+function getSortBy(data,key1,valuefunc){
+    for (let key of data) {
+        key[key1]=valuefunc(key);
     }
         function sortby(){
             function sortby4(a,b){
-                return b.healingRate-a.healingRate;
+                return b[key1]-a[key1];
             }
-            countriesData.sort(sortby4);
+            data.sort(sortby4);
+            console.log(data);     
         }
         return sortby;
 }
 function healingrate(object){
-   return countriesData[object].heal/countriesData[object].confirm;
+   return object.heal/object.confirm;
 }
 let sortExample=getSortBy(countriesData,"healingRate",healingrate);
 sortExample();
@@ -141,12 +143,14 @@ sortExample();
 
 let dataAmerica={};
 let temp=0;
-for (let key in countriesData) {
-   if(countriesData[key].name=="北美洲"){
-       dataAmerica.information[temp]=countriesData[key];
-       temp++;
+dataAmerica.information=[];
+for (let key of countriesData) {
+   if(key.continent=="北美洲"){
+    dataAmerica.information[temp]=key;
+    temp++;
    }
 }
+console.log(dataAmerica);
 
 // Javascript中，有个很有用的函数，filter(callback)
 // Takes in a callback function which takes in an item (of the array) and returns a boolean value. 
@@ -154,12 +158,13 @@ for (let key in countriesData) {
 // 例
 const numbers = [1, 2, 3, 4];
 const evens = numbers.filter(item => item % 2 == 0);
-console.log(evens); // [2,4]
+//console.log(evens); // [2,4]
 
 // 请用这种方式实现同样的功能
 // TODO: Please write your code below
 
-const dataAmerica=countriesData.filter(data => data.continent=="北美洲");
+const dataAmerica2=countriesData.filter(data => data.continent=="北美洲");
+//console.log(dataAmerica2);
 
 // 5- Map 函数
 // map 函数：
@@ -177,3 +182,4 @@ function list(num){
     return num.name;
 }
 const finalList= countriesData.map(list);
+console.log(finalList);
