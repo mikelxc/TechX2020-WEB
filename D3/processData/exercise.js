@@ -22,6 +22,10 @@ const jsonExample = {
     ]
 }
 
+
+
+
+
 // 获取JSON内对象的两种方式
 
 jsonExample.emplNum
@@ -31,7 +35,7 @@ jsonExample["emplNum"]
 
 const jsonStr = '{ "name": "cxh", "sex": "man" }'
 // JS Object to JSON
-const jsObj = JSON.parse(jsonStr)
+const jsObj=JSON.parse(jsonStr)
 // JSON string to JS Object
 const str = JSON.stringify(jsObj)
 
@@ -58,6 +62,20 @@ const countriesData = require('./data.json');
 
 // TODO: Please write your code below
 
+let MAX=0;
+let MAXHealCountry="";
+for(let key in countriesData){                      //遍历所有国家，找出治愈人数最多的国家
+        if(countriesData[key].heal>=MAX) {
+            MAX=countriesData[key].heal;  
+            MAXHealCountry=countriesData[key].name;
+        }             
+}
+console.log("治愈数最多的国家是："+MAXHealCountry);
+console.log("其治愈总数为："+MAX);
+
+
+
+
 
 // 2- 排序
 // 在javascript中，对数组可以进行排序。方法为：arrayObject.sort(sortby)
@@ -73,7 +91,7 @@ arr.sort();
 // sortby函数有两个input：a和b，规定a和b之间的比较方式。若根据比较规则，a<b (a应该在b之前)，则返回一个小于0的值；a=b则返回0；a>b则返回大于0的值。
 
 function sortby(a, b) {
-    return a - b;
+    return b - a;
 };
 arr.sort(sortby);
 // 输出：[2, 3, 4, 10, 12, 30, 42, 59, 100, 244, 7000]
@@ -82,10 +100,43 @@ arr.sort(sortby);
 
 // TODO: Please write your code below
 
+let len=countriesData.length;               //数组的长度
+let confirmAddArray=new Array(len);         //根据长度生成数组
+for(let index in confirmAddArray)
+{
+    confirmAddArray[index]=countriesData[index].confirmAdd;     //将每个元素添加到数组里
+}
+
+confirmAddArray.sort(sortby);           //降序排序
+for(let index in confirmAddArray)
+{
+    console.log(confirmAddArray[index]);        //输出到控制台
+}
+
+
+
+
+
 
 // 习题：请在countriesData中为各个国家添加死亡比例deathRate字段(累计死亡人数/累计确诊人数人数)并进行降序排序
 
 // TODO: Please write your code below
+for(let i in countriesData)
+{
+    countriesData[i].deathRate=countriesData[i].dead/countriesData[i].confirm;      //添加死亡比例字段
+}
+
+let deathRateArray=new Array(countriesData.length);
+for(let i in countriesData){                
+    deathRateArray[i]=countriesData[i].deathRate;
+}
+deathRateArray.sort(sortby);                //对deathRateArray进行降序排序
+
+for(let i in deathRateArray){                   //输出排序后的结果
+    console.log(deathRateArray[i]);
+}
+
+
 
 
 // 3- 高阶函数
@@ -97,30 +148,56 @@ arr.sort(sortby);
 // 然后用getSortBy生成一个"healingRate"字段(heal/confirm)，并根据这个字段降序排序。
 
 // TODO: Please write your code below
+function getSortBy()
+{
 
+}
 
 
 // 4- 我们只需要北美洲的信息
 // 习题：请创建dataAmerica对象，使其中只包含北美的信息。
 
 // TODO: Please write your code below
-
+    let dataAmerica=[];                  //创建数组（感觉数组比较适合）
+    let count=0;                        
+    for(let index in countriesData)
+    {
+        if(countriesData[index].continent==="北美洲")       //如果是北美洲国家
+        {
+            dataAmerica[count]=countriesData[index];        //得到对象   
+            count++;                                        //count自增
+        }
+    }
+    for(let index in dataAmerica)                           //遍历dataAmerica中的元素，进行输出
+        {
+            console.log(dataAmerica[index]);
+        }
 
 // Javascript中，有个很有用的函数，filter(callback)
 // Takes in a callback function which takes in an item (of the array) and returns a boolean value. 
 // Returns an iterable of the same type. An item will appear in the returned iterable only if the returned value for the item is true 
+//接受一个回调函数，该函数接受（数组的）项并返回一个布尔值。              
+//返回同一类型的iterable。只有当返回的iterable值为true时，该项才会出现在返回的iterable中
 // 例
 const numbers = [1, 2, 3, 4];
 const evens = numbers.filter(item => item % 2 == 0);
 console.log(evens); // [2,4]
 
+
+
 // 请用这种方式实现同样的功能
 // TODO: Please write your code below
+
+const dataEurope=countriesData.filter(item=> item.continent==="欧洲");      //用filter过滤出所有欧洲国家的信息
+console.log(dataEurope);
+
 
 // 5- Map 函数
 // map 函数：
 // Takes in a callback function, taking in an item, returning a modified item.
 // Returns an iterable on the same type with the modified items. 
+//接受一个回调函数，接受一个项，返回一个修改过的项。
+//返回具有已修改项的同一类型的iterable。
 // 例
 const double = (num) => (num * 2);
 const doubled = numbers.map(double);
@@ -128,5 +205,7 @@ console.log(doubled); // [2, 4, 6, 8]
 
 // 习题：请用map生成一个只包含json中各个国家名字的list
 // TODO: Please write your code below
-
+const countriesName=(countriesData)=>(countriesData.name);
+const countriesNames=countriesData.map(countriesName);
+console.log(countriesNames);
 
