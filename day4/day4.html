@@ -9,8 +9,16 @@
         </style>
     </head>
     <body>
+        <div id="div1">div1</div>
         <script>
-
+            document.body.onload = addElement;
+            function addElement() {
+                let newDiv = document.createElement('div');
+                let newContent = document.createTextNode("Hello World");
+                newDiv.appendChild(newContent);
+                let currentDiv = document.getElementById('div1');
+                document.body.insertBefore(newDiv, currentDiv);
+            }
         </script>
     </body>
 </html>
