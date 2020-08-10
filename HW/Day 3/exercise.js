@@ -66,7 +66,8 @@ for (let key in countriesData) {
         country = countriesData[key]["name"];
     }
 }
-console.log(country);
+
+//console.log(country);
 
 
 // 2- 排序
@@ -96,12 +97,20 @@ for (key in countriesData) {
     array.push(Number(countriesData[key]["confirmAdd"]));
 }
 let decreasedArray = array.sort(sortby).reverse();
-console.log(decreasedArray)
+//console.log(decreasedArray)
 // 习题：请在countriesData中为各个国家添加死亡比例deathRate字段(累计死亡人数/累计确诊人数人数)并进行降序排序
 
 // TODO: Please write your code below
-
-
+for (key in countriesData) {
+    //console.log(countriesData[key]);
+    countriesData[key]["deathRate"] = Number(countriesData[key]["dead"])/Number(countriesData[key]["confirm"]);
+}
+array = [];
+for (key in countriesData) {
+    array.push(Number(countriesData[key]["deathRate"]));
+}
+decreasedArray = array.sort(sortby).reverse();
+//console.log(decreasedArray)
 // 3- 高阶函数
 // 从以上的排序的例子不难发现，javascript支持将函数作为函数的参数使用。
 // Javascript也支持将函数作为返回值使用。这种方便的操作就是高阶函数。上面使用的sort就是高阶函数。
@@ -127,7 +136,7 @@ function getSortBy(data, key, valuefunc) {
     }
 }
 let sortBy = getSortBy(countriesData, 'healingRate', getHealingRate);
-console.log(sortBy());
+//console.log(sortBy());
 
 
 // 4- 我们只需要北美洲的信息
@@ -143,7 +152,7 @@ for (key in countriesData) {
         temp += 1;
     }
 }
-console.log(dataAmerican);
+//console.log(dataAmerican);
 // Javascript中，有个很有用的函数，filter(callback)
 // Takes in a callback function which takes in an item (of the array) and returns a boolean value. 
 // Returns an iterable of the same type. An item will appear in the returned iterable only if the returned value for the item is true 
@@ -152,7 +161,7 @@ const numbers = [1, 2, 3, 4];
 const evens = numbers.filter(item => item % 2 == 0);
 const dataAmerican_2 = countriesData.filter(item => item.continent == "北美洲")
 console.log(evens); // [2,4]
-console.log(dataAmerican_2);
+//console.log(dataAmerican_2);
 // 请用这种方式实现同样的功能
 // TODO: Please write your code below
 
@@ -169,5 +178,4 @@ console.log(doubled); // [2, 4, 6, 8]
 // TODO: Please write your code below
 const generateCountry = (json) => (json.name);
 const generatedCountry = countriesData.map(generateCountry);
-console.log(generatedCountry);
-
+//console.log(generatedCountry);
