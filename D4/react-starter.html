@@ -17,7 +17,6 @@
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 
     <script type="text/babel">
-
       // JSX code here. Or link to separate JavaScript file that contains JSX.
       /* const greeting = React.createElement(
         "h1", 
@@ -67,9 +66,13 @@
         [element, element1, React.createElement(techXList, null, null)],
         document.getElementById("react-container")
       ); */
-
+      
       let res;
-      fetch("https://cat-fact.herokuapp.com/facts?animal_type=cat").then((response)=>{res = response.json()});
+      fetch("https://cat-fact.herokuapp.com/facts?animal_type=cat").then(
+        (response) => {
+          res = response.json();
+        }
+      );
     </script>
   </body>
 </html>
