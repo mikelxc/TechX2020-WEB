@@ -54,7 +54,18 @@
 
       let name = "React and JSX";
       const element = <h1>Welcome to my {name} class</h1>
-      ReactDOM.render(element, document.getElementById("react-container"));
+      const elementOld = React.createElement("h1", null, `Welcome to my ${name} class`);
+      const AL = {
+        firstName: "Aego",
+        lastName: "Yu"
+      };
+      function formatName(user) {
+        return user.firstName + " " + user.lastName;
+      };
+      const element1 = (
+        <h1>Hello, {formatName(AL)}!</h1>
+      );
+      ReactDOM.render(element1, document.getElementById("react-container"));
     </script>
   </body>
 </html>
