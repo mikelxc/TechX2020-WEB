@@ -56,7 +56,7 @@ const countriesData = require('./data.json');
 
 // 1- 请找出治愈人数最多的国家
 
-// TODO: Please write your code below
+// TODO: Please write your code below.
 
 let mostHealed;
 let previous = 0;
