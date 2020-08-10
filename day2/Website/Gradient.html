@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Gradient</title>
+        <style>
+            html {
+                min-height: 100%;
+            }
+            body {
+                background: linear-gradient(to right, #93B874, #C9DCB9); 
+            }
+            #first {
+                margin-top: 300px;
+                margin-left: 580px;
+            }
+            #refresh {
+                margin-left: 575px;
+            }
+            #linear {
+                margin-left: 567px;
+            }
+            #circular {
+                margin-left: 577px;
+            }
+            #inflect {
+                margin-left: 607px;
+            }
+        </style>
+    </head>
+    <body id = 'gradient'>
+        <input id = "first" name="Color Picker" value = "#93B874" type="color"/>
+        <input id = "second" name="Color Picker" value = "#C9DCB9" type="color"/>
+        </br>
+        <button id="refresh" onclick="refresh()">Return to default</button>
+        </br>
+        <button id="linear" onclick="linear()">Horizontal Gradient</button>
+        </br>
+        <button id="circular" onclick="circular()">Radial Gradient</button>
+        </br>
+        <button id="inflect" onclick="inflect()">Inflect</button>
+        <script>
+            var firstInput = document.getElementById("first");
+            var firstColor = firstInput.value;
+            firstInput.addEventListener("input", function() {
+                firstInput = document.getElementById("first");
+                firstColor = firstInput.value;
+                document.getElementById('gradient').style.setProperty('background', `${type1}(${type2}, ${firstColor}, ${secondColor})`);
+            }, false);
+
+            var secondInput = document.getElementById("second");
+            var secondColor = secondInput.value;
+            secondInput.addEventListener("input", function() {
+                secondInput = document.getElementById("second");
+                secondColor = secondInput.value;
+                document.getElementById('gradient').style.setProperty('background', `${type1}(${type2}, ${firstColor}, ${secondColor})`);
+            }, false);
+
+            refresh = function() {
+                location.reload();
+            }
+
+            var type1 = "linear-gradient";
+            var type2 = "to right";
+
+            linear = function() {
+                type1 = "linear-gradient";
+                type2 = "to right";
+                document.getElementById('gradient').style.setProperty('background', `${type1}(${type2}, ${firstColor}, ${secondColor})`);
+            }
+
+            circular = function() {
+                type1 = "radial-gradient";
+                type2 = "circle";
+                document.getElementById('gradient').style.setProperty('background', `${type1}(${type2}, ${firstColor}, ${secondColor})`);
+            }
+
+            inflect = function() {
+                let color2 = firstColor;
+                firstColor = secondColor;
+                secondColor = color2;
+                document.getElementById('gradient').style.setProperty('background', `${type1}(${type2}, ${firstColor}, ${secondColor})`);
+            }
+        </script>
+    </body>
+</html>

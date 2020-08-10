@@ -1,0 +1,588 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z">
+		<title>Sky Wars</title>
+		<style>
+			/* .title{
+				text-align: center;
+				font-family: 'Times New Roman', Times, serif;
+				font-size: 48px;
+				color: grey;
+				margin-top: -10px;
+			} */
+			body{
+				background-color: lightgrey;
+				overflow: hidden;
+			}
+			.first{
+				margin-left: 100px;
+				margin-top: 80px;
+			}
+			.second{
+				margin-left: 715px;
+				margin-top: 80px;
+			}
+			.third{
+				margin-left: 135px;
+				margin-top: 200px;
+			}
+			.fourth{
+				margin-left: 790px;
+				margin-top: 200px;
+			}
+			.spacecraft{
+				size: 150%;
+			}
+			canvas{
+				margin-top: -625px;
+			}
+			ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: black;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            li {
+                float: left;
+                border-right: 1px solid #bbb;
+            }
+            li a {
+                display: block;
+                color: white;
+                padding: 14px 16px;
+                text-decoration: none;
+                text-align: center;
+            }
+            li a:hover {
+                background-color: #333;
+            }
+            .active {
+                background-color: #4CAF50;
+            }
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href = "Home.html">Home</a></li>
+			<li><a href = "JourneyAtTechX.html">My Journey At TechX</a></li>
+			<li><a href = "Game.html" class = "active">Sky Wars</a></li>
+		</ul>
+		<div class = "spacecraft">
+			<img src = "images/enemy3.png" class = "first">
+			<img src = "images/enemy3.png" class = "second">
+			<img src = "images/hero1.png" class = "third">
+			<img src = "images/hero1.png" class = "fourth">
+		</div>
+		<div id="stage" style="margin: 0 auto; width: 480px; height: 650px; text-align: center; vertical-align: middle" >
+			<canvas id="canvas" style="border:5px solid grey;" width="480" height="650">
+				不支持画板对象
+			</canvas>
+		</div>
+		<script>
+			var canvas = document.getElementById('canvas');
+			var ctx = canvas.getContext('2d');
+
+			var background = new Image();
+			background.src = "images/background.png";
+
+			var sky = new Sky();
+
+			var e1 = [];
+			e1[0] = new Image();
+			e1[0].src = "images/enemy1.png";
+			e1[1] = new Image();
+			e1[1].src = "images/enemy1_down1.png";
+			e1[2] = new Image();
+			e1[2].src = "images/enemy1_down2.png";
+			e1[3] = new Image();
+			e1[3].src = "images/enemy1_down3.png";
+			e1[4] = new Image();
+			e1[4].src = "images/enemy1_down4.png";
+
+			var e2 = [];
+			e2[0] = new Image();
+			e2[0].src = "images/enemy2.png";
+			e2[1] = new Image();
+			e2[1].src = "images/enemy2_down1.png";
+			e2[2] = new Image();
+			e2[2].src = "images/enemy2_down2.png";
+			e2[3] = new Image();
+			e2[3].src = "images/enemy2_down3.png";
+			e2[4] = new Image();
+			e2[4].src = "images/enemy2_down4.png";
+
+			var e3 = [];
+			e3[0] = new Image();
+			e3[0].src = "images/enemy3_n1.png";
+			e3[1] = new Image();
+			e3[1].src = "images/enemy3_n2.png";
+			e3[2] = new Image();
+			e3[2].src = "images/enemy3_down1.png";
+			e3[3] = new Image();
+			e3[3].src = "images/enemy3_down2.png";
+			e3[4] = new Image();
+			e3[4].src = "images/enemy3_down3.png";
+			e3[5] = new Image();
+			e3[5].src = "images/enemy3_down4.png";
+			e3[6] = new Image();
+			e3[6].src = "images/enemy3_down5.png";
+			e3[7] = new Image();
+			e3[7].src = "images/enemy3_down6.png";
+
+			var h = [];
+			h[0] = new Image();
+			h[0].src = "images/hero1.png";
+			h[1] = new Image();
+			h[1].src = "images/hero2.png";
+			h[2] = new Image();
+			h[2].src = "images/hero_blowup_n1.png";
+			h[3] = new Image();
+			h[3].src = "images/hero_blowup_n2.png";
+			h[4] = new Image();
+			h[4].src = "images/hero_blowup_n3.png";
+			h[5] = new Image();
+			h[5].src = "images/hero_blowup_n4.png";
+
+			//var copyright = new Image();
+			//copyright.src = "images/shoot_copyright.png";
+
+			var pause = new Image();
+			pause.src = "images/game_pause_nor.png";
+
+			var b = [];
+			b[0] = new Image();
+			b[0].src = "images/bullet1.png";
+			b[1] = new Image();
+			b[1].src = "images/bullet2.png";
+
+			var enemies = [];
+			var hero = new Hero(0, 0, 99, 124, 1, h, 2);
+			var bullets = [];
+			var score = 0;
+			var heroes = 3;
+
+			var START = 1;
+			var RUNNING = 2;
+			var PAUSE = 3;
+			var GAME_OVER = 4;
+			var state = START;
+			var difficulty;
+
+			setInterval(function() {
+				controlState(ctx);
+			}, 10);
+
+			setInterval(function() {
+				difficulty = difficulty + 1;
+			}, 1000);
+
+			function controlState(ctx) {
+				switch(state) {
+				case START :
+					sky.paint(ctx);
+					if (state == START) {
+						ctx.font = "40px 微软雅黑";
+						ctx.fillText("CLICK TO START", 80, 500);
+					}
+					sky.step();
+					var x = 20;
+					var y = 130;
+					//ctx.drawImage(copyright, x, y);
+					break;
+				case RUNNING :
+					componentEnter();
+					hero.shoot();
+					checkHit();
+					componentStep();
+					paintComponent(ctx);
+					deleteComponent();
+					break;
+				case PAUSE :
+					paintComponent(ctx);
+					sky.step();
+					ctx.drawImage(pause, 0, 0);
+					break;
+				case GAME_OVER :
+					paintComponent(ctx);
+					sky.step();
+					var x = 480 / 2 - 245 / 2;
+					var y = 852 * (1 - 0.6);
+					ctx.font = "40px 微软雅黑";
+					ctx.fillText("GAME OVER", x, y);
+					ctx.fillText("CLICK TO RESTART", x - 68, y + 80)
+					break;
+				}
+			}
+
+
+			canvas.onclick = function() {
+				if (state == START) {
+					state = RUNNING;
+					difficulty = 0;
+				}
+				if (state == GAME_OVER) {
+					window.location.reload();
+				}
+			};
+
+			canvas.onmouseout = function() {
+				if (state == RUNNING) {
+					state = PAUSE;
+				}
+			};
+
+			canvas.onmouseover = function() {
+				if (state == PAUSE) {
+					state = RUNNING;
+				}
+			};
+
+			function isActionTime(lastTime, interval) {
+				if (lastTime == 0) {
+					return true;
+				}
+				var currentTime = new Date().getTime();
+				return currentTime - lastTime >= interval;
+			}
+
+			var lastTime = 0;
+			var interval = 400;
+
+			function componentEnter() {
+				if (! isActionTime(lastTime, interval)) {
+					return;
+				}
+				lastTime = new Date().getTime();
+				var n = parseInt(Math.random() * 10);
+				if (difficulty < 30) {
+					switch(n) {
+					case 0:
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+					case 6:
+					case 7:
+						enemies[enemies.length] = new Enemy(0, -51, 57, 51, 1, 1, 1, e1, 1);
+						break;
+					case 8:
+						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
+						break;
+					case 9:
+						if (enemies[0] == undefined || enemies[0].type != 3) {
+							enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
+						}
+					}
+				} else if (difficulty >= 30 && difficulty < 60) {
+					switch(n) {
+					case 0:
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+						enemies[enemies.length] = new Enemy(0, -51, 57, 51, 1, 1, 1, e1, 1);
+						break;
+					case 6:
+					case 7:
+					case 8:
+						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
+						break;
+					case 9:
+						if (enemies[0] == undefined || enemies[0].type != 3) {
+							enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
+						}
+					}
+				} else if (difficulty >= 60 && difficulty < 90) {
+					switch(n) {
+					case 0:
+					case 1:
+					case 2:
+					case 3:
+						enemies[enemies.length] = new Enemy(0, -51, 57, 51, 1, 1, 1, e1, 1);
+						break;
+					case 4:
+					case 5:
+					case 6:
+					case 7:
+					case 8:
+						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
+						break;
+					case 9:
+						if (enemies[0] == undefined || enemies[0].type != 3) {
+							enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
+						}
+					}
+				} else if (difficulty >= 90 && difficulty <120) {
+					switch(n) {
+					case 0:
+					case 1:
+						enemies[enemies.length] = new Enemy(0, -51, 57, 51, 1, 1, 1, e1, 1);
+						break;
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+					case 6:
+					case 7:
+					case 8:
+						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
+						break;
+					case 9:
+						if (enemies[0] == undefined || enemies[0].type != 3) {
+							enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
+						}
+					}
+				} else if (difficulty >= 120) {
+					switch(n) {
+					case 0:
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+					case 6:
+					case 7:
+					case 8:
+						enemies[enemies.length] = new Enemy(0, -95, 69, 95, 2, 3, 5, e2, 1);
+						break;
+					case 9:
+						if (enemies[0] == undefined || enemies[0].type != 3) {
+							enemies.splice(0, 0, new Enemy(0, -258, 169, 258, 3, 20, 20, e3, 2));
+						}
+					}
+				}
+			}
+
+			function componentStep() {
+				sky.step();
+				for (var i = 0; i < enemies.length; i++) {
+					enemies[i].step();
+				}
+				for (var i = 0; i < bullets.length; i++) {
+					bullets[i].step();
+				}
+				hero.step();
+			}
+
+			function paintComponent(ctx) {
+				sky.paint(ctx);
+				for (var i = 0; i < enemies.length; i++) {
+					enemies[i].paint(ctx);
+				}
+				for (var i = 0; i < bullets.length; i++) {
+					bullets[i].paint(ctx);
+				}
+				hero.paint(ctx);
+				ctx.font = "20px 微软雅黑";
+				ctx.fillText("SCORE:" + score, 10, 20);
+				ctx.fillText("LIFE:" + heroes, 400, 20);
+				//ctx.fillText("DIFFICULTY:" + difficulty, 330, 60);
+			}
+
+			function Sky() {
+				this.img = background;
+				this.width = 480;
+				this.height = 852;
+				this.x1 = 0;
+				this.y1 = 0;
+				this.x2 = 0;
+				this.y2 = -this.height;
+				this.interval = 40;
+				this.lastTime = 0;
+				this.paint = function(ctx) {
+					ctx.drawImage(this.img, this.x1, this.y1);
+					ctx.drawImage(this.img, this.x2, this.y2);
+				};
+				this.step = function() {
+					if (! isActionTime(this.lastTime, this.interval)) {
+						return;
+					}
+					this.lastTime = new Date().getTime();
+					this.y1 = this.y1 + 1;
+					this.y2 = this.y2 + 1;
+					if (this.y1 > this.height) {
+						this.y1 = -this.height;
+					}
+					if (this.y2 > this.height) {
+						this.y2 = -this.height;
+					}
+				};
+			}
+
+			function getPointOnCanvas(x, y) {
+				var bbox = canvas.getBoundingClientRect();
+				return {
+					x : x - bbox.left,
+					y : y - bbox.top
+				};
+			}
+
+
+			canvas.onmousemove = function(e) {
+				if (state == RUNNING) {
+					var mpoint = getPointOnCanvas(e.x, e.y);
+					hero.x = mpoint.x - hero.width / 2;
+					hero.y = mpoint.y - hero.height / 2;
+				}
+			};
+
+			function FlyingObject(x, y, width, height, life, frames, baseFrameCount) {
+				this.x = x;
+				this.y = y;
+				this.width = width;
+				this.height = height;
+				this.life = life;
+				this.interval = 10;
+				this.lastTime = 0;
+				this.down = false;
+				this.canDelete = false;
+				this.frames = frames;
+				this.img = this.frames[0];
+				this.frameIndex = 0;
+				this.frameCount = baseFrameCount;
+				this.paint = function(ctx) {
+					ctx.drawImage(this.img, this.x, this.y);
+				};
+				this.step = function() {
+					if (! isActionTime(this.lastTime, this.interval)) {
+						return;
+					}
+					this.lastTime = new Date().getTime();
+					//this.move();
+					if (this.down) {
+						if (this.frameIndex == frames.length) {
+							this.canDelete = true;
+						} else {
+							this.img = this.frames[this.frameIndex];
+						}
+						this.frameIndex++;
+					} else {
+						this.move();
+						this.img = this.frames[this.frameIndex % this.frameCount];
+						this.frameIndex++;
+					}
+				};
+				this.move = function() {
+					this.y++;
+				};
+				this.hit = function(component) {
+					var c = component;
+					return c.x > this.x - c.width && c.x < this.x + this.width && c.y > this.y - c.height && c.y < this.y + this.height;
+				};
+				this.bang = function() {
+					this.life--;
+					if (this.life == 0) {
+						this.down = true;
+						if (this.score) {
+							score = score + this.score;
+						}
+						this.frameIndex = this.frameCount;
+					}
+				};
+				this.outOfBounds = function() {
+					return this.y >= 852;
+				};
+			}
+
+			function Enemy(x, y, width, height, type, life, score, frames, baseFrameCount) {
+				FlyingObject.call(this, x, y, width, height, life, frames, baseFrameCount);
+				this.x = Math.random() * (480 - this.width);
+				this.y = -this.height;
+				this.score = score;
+				this.type = type;
+			}
+
+			function Hero(x, y, width, height, life, frames, baseFrameCount) {
+				FlyingObject.call(this, x, y, width, height, life, frames, baseFrameCount);
+				this.x = 480 / 2 - this.width / 2;
+				this.y = 650 - this.height - 30;
+				this.shootInterval = 400;
+				this.shootLastTime = 0;
+				this.shoot = function() {
+					if (!isActionTime(this.shootLastTime, this.shootInterval)) {
+						return;
+					}
+					this.shootLastTime = new Date().getTime();
+					bullets[bullets.length] = new Bullet(this.x + 45, this.y, 9, 21, 1, b, 1);
+				};
+				this.move = function() {
+
+				};
+			}
+
+			function Bullet(x, y, width, height, life, frames, baseFrameCount) {
+				FlyingObject.call(this, x, y, width, height, life, frames, baseFrameCount);
+				this.powerfulShot = function() {
+					return true;
+				};
+				this.move = function() {
+					this.y -= 2;
+				};
+				this.outOfBounds = function() {
+					return this.y < -this.height;
+				};
+			}
+
+			function checkHit() {
+				for (var i = 0; i < enemies.length; i++) {
+					var enemy = enemies[i];
+					if (enemy.canDelete || enemy.down) {
+						continue;
+					}
+					for (var j = 0; j < bullets.length; j++) {
+						var bullet = bullets[j];
+						if (bullet.canDelete /* ||this.down*/) {
+							continue;
+						}
+						if (enemy.hit(bullet)) {
+							enemy.bang();
+							bullet.bang();
+						}
+					}
+					if (enemy.hit(hero)) {
+						enemy.bang();
+						hero.bang();
+					}
+				}
+			}
+
+			function deleteComponent() {
+				var ary = [];
+				var idx = 0;
+				for (var i = 0; i < enemies.length; i++) {
+					if (!(enemies[i].canDelete || enemies[i].outOfBounds())) {
+						ary[idx] = enemies[i];
+						idx++;
+					}
+				}
+				enemies = ary;
+				ary = [];
+				idx = 0;
+				for (var i = 0; i < bullets.length; i++) {
+					if (!(bullets[i].canDelete || bullets[i].outOfBounds())) {
+						ary[idx] = bullets[i];
+						idx++;
+					}
+				}
+				bullets = ary;
+				if (hero.canDelete) {
+					heroes--;
+					if (heroes == 0) {
+						state = GAME_OVER;
+					} else {
+						hero = new Hero(0, 0, 99, 124, 1, h, 2);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
