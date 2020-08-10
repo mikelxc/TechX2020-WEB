@@ -11,7 +11,7 @@
   </head>
   <body>
     <div id="react-container"></div>
-
+    <img src="" id="thumbnail" height="300px" width="250px">
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
@@ -73,6 +73,7 @@
         })
         .then((data) => {
           let i = data;
+          let thumb = i.drinks[0].strDrinkThumb;
           console.log(i);
           function drinkList() {
             return React.createElement(
@@ -84,6 +85,8 @@
               React.createElement("li", null, `It is a(n) ${i.drinks[0].strCategory.toLowerCase()}.`)
             );
           }
+
+          document.getElementById('thumbnail').src = thumb;
 
           ReactDOM.render(
             React.createElement(drinkList, null, null),
