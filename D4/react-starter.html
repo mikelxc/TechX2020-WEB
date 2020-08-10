@@ -67,10 +67,10 @@
         document.getElementById("react-container")
       ); */
       
-      let res;
-      fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata").then(
+      let cocktail;
+      fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php").then(
         (response) => {
-          res = response.json();
+          cocktail = response.json();
         }
       );
     </script>
