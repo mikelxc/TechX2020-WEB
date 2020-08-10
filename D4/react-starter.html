@@ -66,13 +66,14 @@
         [element, element1, React.createElement(techXList, null, null)],
         document.getElementById("react-container")
       ); */
-      
-      let cocktail;
-      fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php").then(
-        (response) => {
-          cocktail = response.json();
-        }
-      );
+
+      fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+        .then((response) => {
+          return response.text();
+        })
+        .then((data) => {
+          console.log(data);
+        });
     </script>
   </body>
 </html>
