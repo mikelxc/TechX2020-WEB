@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>React with JSX Final</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+
+    <script type="text/babel">
+      // JSX code here. Or link to separate JavaScript file that contains JSX.
+      const data = [
+        {
+          name: "Baked Salmon",
+          ingredients: [
+            { name: "Salmon", amount: 1, measurement: "l lb" },
+            { name: "Pine Nuts", amount: 1, measurement: "cup" },
+            { name: "Butter Lettuce", amount: 2, measurement: "cups" },
+            { name: "Yellow Squash", amount: 1, measurement: "med" },
+            { name: "Olive Oil", amount: 0.5, measurement: "cup" },
+            { name: "Garlic", amount: 3, measurement: "cloves" },
+          ],
+          steps: [
+            "Preheat the oven to 350 degrees.",
+            "Spread the olive oil around a glass baking dish.",
+            "Add the yellow squash and place in the oven for 30 mins.",
+            "Add the salmon, garlic, and pine nuts to the dish.",
+            "Bake for 15 minutes.",
+            "Remove from oven. Add the lettuce and serve.",
+          ],
+        },
+        {
+          name: "Fish Tacos",
+          ingredients: [
+            { name: "Whitefish", amount: 1, measurement: "l lb" },
+            { name: "Cheese", amount: 1, measurement: "cup" },
+            { name: "Iceberg Lettuce", amount: 2, measurement: "cups" },
+            { name: "Tomatoes", amount: 2, measurement: "large" },
+            { name: "Tortillas", amount: 3, measurement: "med" },
+          ],
+          steps: [
+            "Cook the fish on the grill until cooked through.",
+            "Place the fish on the 3 tortillas.",
+            "Top them with lettuce, tomatoes, and cheese.",
+          ],
+        },
+      ];
+      function Menu(props) {
+        return (
+          <article>
+            <header>
+              <h1>{props.title}</h1>
+            </header>
+            <div className="recipes">
+              {props.recipes.map((recipe, i) => (
+                <Recipe
+                  key={i}
+                  name={recipe.name}
+                  ingredients={recipe.ingredients}
+                  steps={recipe.steps}
+                />
+              ))}
+            </div>
+          </article>
+        );
+      }
+      function Recipe({ name, ingredients, steps }) {
+        return (
+          <section id={name.toLowerCase().replace(/ /g, "-")}>
+            <h1>{name}</h1>
+            <ul className="ingredients">
+              {ingredients.map((ingredient, i) => (
+                <li key={i}>{ingredient.name}</li>
+              ))}
+            </ul>
+          </section>
+        );
+      }
+      ReactDOM.render(
+        <Menu recipes={data} title="Delicious Food" />,
+        document.getElementById("react-container")
+      );
+    </script>
+  </body>
+</html>
