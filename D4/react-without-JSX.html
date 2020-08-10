@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>React with JSX</title>
+    <style>
+      .blueText {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="react-container"></div>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+
+    <script type="text/babel">
+      const greeting = React.createElement(
+        "h1",
+        null,
+        "Welcome to TechX Full Stack Web"
+      );
+      const intro = React.createElement(
+        "h2",
+        null,
+        "We will learn React today"
+      );
+      const list = React.createElement(
+        "ul",
+        null,
+        React.createElement("li", null, "HTML"),
+        React.createElement("li", null, "CSS"),
+        React.createElement("li", null, "JS"),
+        React.createElement("li", null, "npm"),
+        React.createElement("li", null, "yarn"),
+        React.createElement("li", null, "react")
+      );
+
+      ReactDOM.render([greeting, intro, list], document.getElementById("root"));
+    </script>
+  </body>
+</html>

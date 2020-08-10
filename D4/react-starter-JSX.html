@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>React with JSX</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+
+    <script type="text/babel">
+      // JSX code here. Or link to separate JavaScript file that contains JSX.
+      let name = "React and JSX";
+      const element = <h1>Welcome to my {name} class</h1>;
+      // const elementOld = React.createElement("h1", null, `Welcome to my ${name} class!`)
+      const AL = {
+        firstName: "Aego",
+        lastName: "Yu",
+      };
+
+      function formatName(user) {
+        return user.firstName + " " + user.lastName;
+      }
+
+      function greetUser(user) {
+        if (user) {
+          return <h1>Hello, {formatName(AL)}!</h1>;
+        }
+        return <h1>Hello, stranger, plase log in</h1>;
+      }
+      const element1 = <h1>Hello, {formatName(AL)}!</h1>;
+      ReactDOM.render(element1, document.getElementById("react-container"));
+    </script>
+  </body>
+</html>
