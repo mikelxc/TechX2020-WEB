@@ -1,5 +1,8 @@
 // Exercise
 
+///////////////////Day3——廖书楠///////////////////////
+
+
 // JSON: JavaScript Object Notation(JavaScript 对象表示法) 
 // JSON 是存储和交换文本信息的语法，类似 XML。
 // JSON 比 XML 更小、更快，更易解析。
@@ -102,17 +105,16 @@ arr.sort(sortby);
 
 let len=countriesData.length;               //数组的长度
 let confirmAddArray=new Array(len);         //根据长度生成数组
-for(let index in confirmAddArray)
+for(let index of confirmAddArray)
 {
     confirmAddArray[index]=countriesData[index].confirmAdd;     //将每个元素添加到数组里
 }
 
 confirmAddArray.sort(sortby);           //降序排序
-for(let index in confirmAddArray)
+for(let index of confirmAddArray)
 {
     console.log(confirmAddArray[index]);        //输出到控制台
 }
-
 
 
 
@@ -202,6 +204,8 @@ console.log(dataEurope);
 const double = (num) => (num * 2);
 const doubled = numbers.map(double);
 console.log(doubled); // [2, 4, 6, 8]
+
+
 
 // 习题：请用map生成一个只包含json中各个国家名字的list
 // TODO: Please write your code below
