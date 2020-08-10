@@ -1,0 +1,655 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>环境配置</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="58ae20c1-883b-4b96-9ae6-d5788587e901" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">⚙️</span></div><h1 class="page-title">环境配置</h1></header><div class="page-body"><figure id="2770bf9c-3103-4074-b190-2b479196f72e" class="link-to-page"><a href="Untitled%2058ae20c1883b4b969ae6d5788587e901/WSL%20Homebrew%20Setup%202770bf9c31034074b1902b479196f72e.html">WSL/Homebrew Setup</a></figure><figure id="8348f90d-5e3c-4d6b-92dd-4add2e4e1e5a" class="link-to-page"><a href="Untitled%2058ae20c1883b4b969ae6d5788587e901/Yarn%208348f90d5e3c4d6b92dd4add2e4e1e5a.html">Yarn 换源</a></figure><ul id="6bec612a-ad21-4345-82a4-ea0dd97fca7e" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">A Package Manager</span><p id="11f24fc5-a51a-44a1-b281-d0d86e191763" class="">Recommendations: WSL for Windows, HomeBrew for Mac or Linux (the one you are most comfortable with)</p><figure id="0ebcdff2-f3fd-4d63-9985-807e34d8c65f"><a href="https://brew.sh" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Homebrew</div><div class="bookmark-description">The Missing Package Manager for macOS (or Linux).</div></div><div class="bookmark-href"><img src="https://brew.sh/assets/img/favicon.ico" class="icon bookmark-icon"/>https://brew.sh</div></div><img src="https://brew.sh/assets/img/homebrew-social-card.png" class="bookmark-image"/></a></figure><figure id="44d1fad1-d9e0-4b78-b998-34f400bab81a"><a href="https://docs.microsoft.com/en-us/windows/wsl/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">An overview on the the Windows Subsystem for Linux</div><div class="bookmark-description">Explore the Windows Subsystem for Linux documentation.</div></div><div class="bookmark-href"><img src="https://docs.microsoft.com/favicon.ico" class="icon bookmark-icon"/>https://docs.microsoft.com/en-us/windows/wsl/</div></div><img src="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" class="bookmark-image"/></a></figure></li></ul><ul id="9d95abe7-deb3-46f0-8dfe-6ee840258de1" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">MERN Stack </span><p id="f4f41992-9e1e-4d38-929d-5eb82389234c" class="">（windows 安装在WSL下， Mac使用homebrew安装）</p><p id="a7590042-2d7f-4636-b9de-b044860865bc" class="">Can be installed with your package manager </p><figure id="58024125-b814-4e65-925b-dcaf1126d671"><a href="https://www.mongodb.com" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The most popular database for modern apps</div><div class="bookmark-description">MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. No database makes you more productive. Try MongoDB free in the cloud! Used by millions of developers to power the world&#x27;s most innovative products and services THE DOCUMENT MODEL MongoDB is a document database, which means it stores data in JSON-like documents.</div></div><div class="bookmark-href"><img src="https://www.mongodb.com/assets/images/global/favicon.ico" class="icon bookmark-icon"/>https://www.mongodb.com</div></div><img src="https://webassets.mongodb.com/_com_assets/cms/world-logo-or5tl4u3ik.png" class="bookmark-image"/></a></figure><figure id="cf0b1bdb-9cd9-46a5-966a-fe9cbd28fce1"><a href="https://nodejs.org/en/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Node.js</div><div class="bookmark-description">Node.js® is a JavaScript runtime built on Chrome&#x27;s V8 JavaScript engine.</div></div><div class="bookmark-href"><img src="https://nodejs.org/static/images/favicons/favicon.ico" class="icon bookmark-icon"/>https://nodejs.org/en/</div></div><img src="https://nodejs.org/static/images/logo-hexagon-card.png" class="bookmark-image"/></a></figure><figure id="fc345ff5-273e-4b11-ad4e-72750d4db0e1"><a href="http://expressjs.com" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Express - Node.js web application framework</div><div class="bookmark-description">Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.</div></div><div class="bookmark-href"><img src="http://expressjs.com/images/favicon.png" class="icon bookmark-icon"/>http://expressjs.com</div></div><img src="https://expressjs.com/images/express-facebook-share.png" class="bookmark-image"/></a></figure><figure id="142137e9-c07c-43d3-a7f9-cc7038607dab"><a href="https://reactjs.org" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">React - A JavaScript library for building user interfaces</div><div class="bookmark-description">React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable and easier to debug.</div></div><div class="bookmark-href"><img src="https://reactjs.org/icons/icon-48x48.png?v=a95b1cba85b449d3cf230505f32a3d42" class="icon bookmark-icon"/>https://reactjs.org</div></div><img src="https://reactjs.org/logo-og.png" class="bookmark-image"/></a></figure></li></ul><ul id="be116f9a-5f28-49fb-ae8f-a235f19f5442" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">NPM packages</span><p id="5008603a-4fb9-4c06-8f52-b0343f7279b1" class="">You can stick with npm but yarn is a better option. You may use npm/yarn install these packages globally</p><p id="77f14daa-71c2-473c-a5b4-529f21033af6" class="">node-modules, .bin</p><p id="770197be-aaaf-4fa2-80d3-b1780799fd62" class="">parcel</p><figure id="bc2e8995-3054-4d6c-a1c8-ad69f413399e"><a href="https://yarnpkg.com" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Home</div><div class="bookmark-description">Important: This documentation covers Yarn 2. For 1.x docs, see classic.yarnpkg.com. ≡ Safe, stable, reproducible projects Yarn is a package manager that doubles down as project manager. Whether you work on one-shot projects or large monorepos, as a hobbyist or an enterprise user, we&#x27;ve got you covered.</div></div><div class="bookmark-href"><img src="https://yarnpkg.com/icons/icon-48x48.png?v=f5700f2542f6d562c3f654ed9d45683f" class="icon bookmark-icon"/>https://yarnpkg.com</div></div></a></figure><figure id="7ca2e519-9644-4b2b-aef8-fcba1b117245"><a href="https://create-react-app.dev" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Create React App · Set up a modern web app by running one command.</div><div class="bookmark-description">You don&#x27;t need to learn and configure many build tools. Instant reloads help you focus on development. When it&#x27;s time to deploy, your bundles are optimized automatically. Your app only needs one build dependency. We test Create React App to make sure that all of its underlying pieces work together seamlessly - no complicated version mismatches.</div></div><div class="bookmark-href"><img src="https://create-react-app.dev/img/favicon/favicon.ico" class="icon bookmark-icon"/>https://create-react-app.dev</div></div><img src="https://create-react-app.dev/img/logo-og.png" class="bookmark-image"/></a></figure><figure id="55bb6502-4c70-438e-a880-0c742ee24acf" class="link-to-page"><a href="https://www.notion.so/Full-Stack-Web-Development-55bb65024c70438ea8800c742ee24acf"><span class="icon">🌉</span>全栈开发 Full Stack Web Development</a></figure><figure id="cfd110a7-a4db-4fa3-924d-057e4576e302"><a href="https://eslint.org" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">ESLint - Pluggable JavaScript linter</div><div class="bookmark-description">ESLint statically analyzes your code to quickly find problems. ESLint is built into most text editors and you can run ESLint as part of your continuous integration pipeline. Many problems ESLint finds can be automatically fixed.</div></div><div class="bookmark-href"><img src="https://eslint.org/assets/img/favicon.512x512.png" class="icon bookmark-icon"/>https://eslint.org</div></div><img src="https://eslint.org/assets/img/favicon.512x512.png" class="bookmark-image"/></a></figure><figure id="fcc6c519-bb8d-47ce-995d-011dd6d41d03"><a href="https://babeljs.io" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Babel · The compiler for next generation JavaScript</div><div class="bookmark-description">Learn more about Babel with our getting started guide or check out some videos on the people and concepts behind it. We&#x27;re a small group of volunteers that spend their free time maintaining this project, funded by the community. If Babel has benefited you in your work, becoming a contributor or sponsoring might just be a great way to give back!</div></div><div class="bookmark-href"><img src="https://babeljs.io/img/favicon.png" class="icon bookmark-icon"/>https://babeljs.io</div></div><img src="https://images.opencollective.com/gatsbyjs/2aecbd6/logo/256.png" class="bookmark-image"/></a></figure><figure id="eaae0764-02ae-4787-bb0c-31627e9708c3"><a href="https://tldr.sh" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">tldr pages</div><div class="bookmark-description">Simplified and community-driven man pages The tldr pages are a community effort to simplify the beloved man pages with practical examples. Try the live demo below, have a look at the PDF version, or follow the installation instructions.</div></div><div class="bookmark-href"><img src="https://tldr.sh/assets/img/favicon.ico" class="icon bookmark-icon"/>https://tldr.sh</div></div><img src="https://tldr.sh/assets/img/screenshot.png" class="bookmark-image"/></a></figure><p id="e71a6d69-3d8e-4ee4-81be-1d91dbe4cdd3" class="">
+</p></li></ul><ul id="6c0ae820-cc8d-4ddb-953a-599f53817e32" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">A Terminal App:</span><p id="fb6c80a0-76d3-4e32-a29c-4458c5a3b5ee" class="">Recommendations:  iTerm2 for mac and Windows Terminal for windows, Cross-platform hyper and alacrity are also worth trying out</p><figure id="68008520-58e1-441e-945e-e3ef728d2dac"><a href="https://github.com/Microsoft/Terminal" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">microsoft/terminal</div><div class="bookmark-description">This repository contains the source code for: Related repositories include: 👉 Note: Windows Terminal requires Windows 10 1903 (build 18362) or later Install the Windows Terminal from the Microsoft Store. This allows you to always be on the latest version when we release new builds with automatic upgrades.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/Microsoft/Terminal</div></div><img src="https://repository-images.githubusercontent.com/100060912/dc77b180-764a-11e9-9e12-aace7d0ecd7d" class="bookmark-image"/></a></figure><figure id="092707f4-8881-46d4-a97f-90c41b4d4137"><a href="https://iterm2.com" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">iTerm2 - macOS Terminal Replacement</div><div class="bookmark-description">iTerm2 is a replacement for Terminal and the successor to iTerm</div></div><div class="bookmark-href"><img src="https://iterm2.com/favicon.ico" class="icon bookmark-icon"/>https://iterm2.com</div></div><img src="https://iterm2.com/img/logo2x.jpg" class="bookmark-image"/></a></figure><figure id="66336c58-1c95-4490-9e3c-9e5565918f79"><a href="https://github.com/alacritty/alacritty" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">alacritty/alacritty</div><div class="bookmark-description">Alacritty is the fastest terminal emulator in existence. Using the GPU for rendering enables optimizations that simply aren&#x27;t possible without it. Alacritty currently supports macOS, Linux, BSD, and Windows. Alacritty is a terminal emulator with a strong focus on simplicity and performance.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/alacritty/alacritty</div></div><img src="https://cloud.githubusercontent.com/assets/4285147/21585004/2ebd0288-d06c-11e6-95d3-4a2889dbbd6f.png" class="bookmark-image"/></a></figure><figure id="7c0217ce-d478-487b-bad5-46db66c05074"><a href="https://hyper.is" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Hyper™</div><div class="bookmark-description">The goal of the project is to create a beautiful and extensible experience for command-line interface users, built on open web standards. In the beginning, our focus will be primarily around speed, stability and the development of the correct API for extension authors.</div></div><div class="bookmark-href"><img src="https://hyper.is/favicon-16x16.png" class="icon bookmark-icon"/>https://hyper.is</div></div><img src="https://hyper.is/hyper.png" class="bookmark-image"/></a></figure></li></ul><ul id="b18a5a31-5eec-4db5-889b-cd14ed2307de" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CLI-Environment (OPTIONAL)</span><p id="70a89943-6054-47bb-a89f-2e99dd159ff2" class="">Zsh with oh-my-zsh/zprezto or fish</p><figure id="41924a85-bb46-40e9-959a-3739e014f889"><a href="https://github.com/sorin-ionescu/prezto" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">sorin-ionescu/prezto</div><div class="bookmark-description">Prezto is the configuration framework for Zsh; it enriches the command line interface environment with sane defaults, aliases, functions, auto completion, and prompt themes. Prezto will work with any recent release of Zsh, but the minimum required version is 4.3.11.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/sorin-ionescu/prezto</div></div><img src="https://avatars2.githubusercontent.com/u/93816?s=400&amp;v=4" class="bookmark-image"/></a></figure><figure id="55d85776-abe4-4131-b341-7f00e36e1966"><a href="http://ohmyz.sh" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Oh My Zsh - a delightful &amp; open source framework for Zsh</div><div class="bookmark-description">Oh My Zsh is an open source, community-driven framework for managing your zsh configuration. Sounds boring. Let&#x27;s try again. Oh My Zsh will not make you a 10x developer...but you may feel like one. Once installed, your terminal shell will become the talk of the town or your money back!</div></div><div class="bookmark-href"><img src="https://ohmyz.sh/favicon.ico" class="icon bookmark-icon"/>http://ohmyz.sh</div></div><img src="https://ohmyz.sh/img/themes/af-magic.jpg" class="bookmark-image"/></a></figure><figure id="546bb95d-ee9d-4864-8ae1-72fa694bbf8d"><a href="https://fishshell.com" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">fish shell</div><div class="bookmark-description">fish is a smart and user-friendly command line shell for Linux, macOS, and the rest of the family. Tutorial Documentation FAQ Try in Browser fish is available in setup,in the Shells category.</div></div><div class="bookmark-href"><img src="https://fishshell.com/favicon.ico" class="icon bookmark-icon"/>https://fishshell.com</div></div><img src="https://fishshell.com/assets/img/screenshots/scripting_thumb.png" class="bookmark-image"/></a></figure></li></ul><ul id="8845fcde-1543-485c-9c51-cc79f88f1b66" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Browser</span><p id="1ba14888-4679-4cc9-8a5c-c6795ac0f023" class="">Firefox and Safari or Edge (chromium version) will also do, but Chrome is the defacto standard these days</p><figure id="346a0096-f35f-4cf2-b8f8-241c7b4fce88"><a href="https://chrome.google.com" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Google Chrome - Download the Fast, Secure Browser from Google</div><div class="bookmark-description">Download Chrome Download For Windows 10/8.1/8/7 32-bit. For Windows 10/8.1/8/7 64-bit. This computer will no longer receive Google Chrome updates because Windows XP and Windows Vista are no longer supported. For Mac OS X 10.10 or later. This computer will no longer receive Google Chrome updates because Mac OS X 10.6 - 10.9 are no longer supported.</div></div><div class="bookmark-href"><img src="https://www.google.com/chrome/static/images/favicons/android-icon-192x192.png" class="icon bookmark-icon"/>https://chrome.google.com</div></div><img src="https://www.google.com/chrome/static/images/heroes/illo_left.png" class="bookmark-image"/></a></figure><ul id="da004fa9-b40c-49a3-be61-e8288084af3b" class="toggle"><li><details open=""><summary>Browser Plugins</summary><figure id="d1a834bb-08c5-42fb-b75a-5150a9bb0e4e"><a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">React Developer Tools</div><div class="bookmark-description">Adds React debugging tools to the Chrome Developer Tools. Created from revision 23309eb38 on 5/18/2020.</div></div><div class="bookmark-href"><img src="https://ssl.gstatic.com/chrome/webstore/images/icon_144px.png" class="icon bookmark-icon"/>https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en</div></div><img src="https://lh3.googleusercontent.com/W5h-3Esx-a2cOq4TaQ2O5tz-zLMjTupUgJjiFF_wZfszDGHdlGpH0JeZoT29399vLdkRRQqBEeM=w640-h400-e365" class="bookmark-image"/></a></figure><figure id="acdb8794-39ee-45d0-9ee2-8ea10dcb6a92"><a href="https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">WhatRuns</div><div class="bookmark-description">Discover what runs a website. Frameworks, Analytics Tools, Wordpress Plugins, Fonts - you name it.</div></div><div class="bookmark-href"><img src="https://ssl.gstatic.com/chrome/webstore/images/icon_144px.png" class="icon bookmark-icon"/>https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip</div></div><img src="https://lh3.googleusercontent.com/3l94PSikAL3KIkQKdXxgag_kbuCOWj9AOBT0o_18J_IbPJNe4TosBuW_mZYRCtbZcH6hLSNXqw=w640-h400-e365" class="bookmark-image"/></a></figure><figure id="2e666fa2-b474-4d39-ab74-c880992eadcb"><a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Wappalyzer</div><div class="bookmark-description">Identify web technologies</div></div><div class="bookmark-href"><img src="https://ssl.gstatic.com/chrome/webstore/images/icon_144px.png" class="icon bookmark-icon"/>https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg</div></div><img src="https://lh3.googleusercontent.com/QVwNvDyEfFZIJdRsmSQA6NPLAWxkmyrUPR-SH5tQ7D4KiIYR-jzN9NTis-XTZXergz7AHuoSIQ=w640-h400-e365" class="bookmark-image"/></a></figure><figure id="d717ae3b-7cf8-4d96-81fb-33d8aeb708f2"><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Lighthouse</div><div class="bookmark-description">Lighthouse is an open-source, automated tool for improving the performance, quality, and correctness of your web apps. When auditing a page, Lighthouse runs a barrage of tests against the page, and then generates a report on how well the page did.</div></div><div class="bookmark-href"><img src="https://ssl.gstatic.com/chrome/webstore/images/icon_144px.png" class="icon bookmark-icon"/>https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk</div></div><img src="https://lh3.googleusercontent.com/ZmNK4tTTEzptBEw4zd000nm2F0IIa7vhY-tH6s80kHWV-tBToOpCwVOMAAxziD-tzoRfvu85ow=w640-h400-e365" class="bookmark-image"/></a></figure><figure id="f467210f-3f05-48ba-8570-bb9b48fbfcfb"><a href="https://chrome.google.com/webstore/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Dimensions</div><div class="bookmark-description">A tool for designers to measure screen dimensions</div></div><div class="bookmark-href"><img src="https://ssl.gstatic.com/chrome/webstore/images/icon_144px.png" class="icon bookmark-icon"/>https://chrome.google.com/webstore/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj</div></div><img src="https://lh3.googleusercontent.com/Gv-Vt7-Gu95WV2_ZtF7iJYiVXo9uuElVYkq_8uVRP30Zg5g8BMpI-zG5F94m0yXuHS_L_4eIjA=w128-h128-e365" class="bookmark-image"/></a></figure><figure id="2e53971f-c2eb-4e7a-a2c5-920c04d09064"><a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Web Developer</div><div class="bookmark-description">Adds a toolbar button with various web developer tools.</div></div><div class="bookmark-href"><img src="https://ssl.gstatic.com/chrome/webstore/images/icon_144px.png" class="icon bookmark-icon"/>https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm</div></div><img src="https://lh3.googleusercontent.com/ZccCYQft-IxBg8e8B2FsZTPXyu9kYaTKGX4vxVoTVztguJVsrhTlJo_qVd1H1tesz03BxwMdYg=w128-h128-e365" class="bookmark-image"/></a></figure></details></li></ul></li></ul><ul id="114398f1-eb9f-4b2b-90e5-0bbda9b1d7b4" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Text Editor</span><p id="72f5da0a-9a41-46bf-b501-71da5490e838" class="">Sublime Text and Atom are also good alternatives but VSCode is by the the most widely supported text editor. And you are more than welcomed to use emacs/vim if you are an experienced user.</p><figure id="9f76a454-b525-4cfb-a368-def53f3896c0"><a href="https://code.visualstudio.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Visual Studio Code - Code Editing. Redefined</div><div class="bookmark-description">Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications. Visual Studio Code is free and available on your favorite platform - Linux, macOS, and Windows.</div></div><div class="bookmark-href"><img src="https://code.visualstudio.com/favicon.ico" class="icon bookmark-icon"/>https://code.visualstudio.com/</div></div><img src="https://code.visualstudio.com/opengraphimg/opengraph-home.png" class="bookmark-image"/></a></figure><ul id="49fbc8bc-63b4-4dd7-99ce-f61f87f11b59" class="toggle"><li><details open=""><summary>Editor Plugins</summary><figure id="5fafbcbd-880d-4dad-88ab-b3fef4ecf4ea"><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Prettier - Code formatter</div></div><div class="bookmark-href"><img src="https://marketplace.visualstudio.com/favicon.ico" class="icon bookmark-icon"/>https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode</div></div><img src="https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/4.7.0/1589381488071/Microsoft.VisualStudio.Services.Icons.Default" class="bookmark-image"/></a></figure><figure id="78217a92-f367-479d-a3a0-38839d7a60b1"><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">ESLint</div></div><div class="bookmark-href"><img src="https://marketplace.visualstudio.com/favicon.ico" class="icon bookmark-icon"/>https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint</div></div><img src="https://dbaeumer.gallerycdn.vsassets.io/extensions/dbaeumer/vscode-eslint/2.1.5/1587372149666/Microsoft.VisualStudio.Services.Icons.Default" class="bookmark-image"/></a></figure><figure id="ef58b311-f962-473a-9422-50d4d863ef8a"><a href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">ES7 React/Redux/GraphQL/React-Native snippets</div><div class="bookmark-description">This extension provides you JavaScript and React/Redux snippets in ES7 with Babel plugin features for VS Code You can search through snippets with ES7 snippet search command which can be run with CMD + Shift + P or just use CMD + Shift + R keybinding.</div></div><div class="bookmark-href"><img src="https://marketplace.visualstudio.com/favicon.ico" class="icon bookmark-icon"/>https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets</div></div><img src="https://dsznajder.gallerycdn.vsassets.io/extensions/dsznajder/es7-react-js-snippets/2.7.1/1585251666137/Microsoft.VisualStudio.Services.Icons.Default" class="bookmark-image"/></a></figure><figure id="42e2f9dc-c778-4de1-b841-600530673f06"><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Auto Rename Tag</div></div><div class="bookmark-href"><img src="https://marketplace.visualstudio.com/favicon.ico" class="icon bookmark-icon"/>https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag</div></div><img src="https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-rename-tag/0.1.3/1589637448268/Microsoft.VisualStudio.Services.Icons.Default" class="bookmark-image"/></a></figure><figure id="85a6df01-ed11-4821-bee0-4515e9f73f87"><a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Path Intellisense</div></div><div class="bookmark-href"><img src="https://marketplace.visualstudio.com/favicon.ico" class="icon bookmark-icon"/>https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense</div></div><img src="https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/1.4.2/1494488953003/Microsoft.VisualStudio.Services.Icons.Default" class="bookmark-image"/></a></figure><figure id="216e4390-cf66-4760-98e5-bb74cfb2342c"><a href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">indent-rainbow</div><div class="bookmark-description">This extension colorizes the indentation in front of your text alternating four different colors on each step. Some may find it helpful in writing code for Nim or Python. Get it here: Visual Studio Code Marketplace It uses the current editor window tab size and can handle mixed tab + spaces but that is not recommended.</div></div><div class="bookmark-href"><img src="https://marketplace.visualstudio.com/favicon.ico" class="icon bookmark-icon"/>https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow</div></div><img src="https://raw.githubusercontent.com/oderwat/vscode-indent-rainbow/master/assets/example.png" class="bookmark-image"/></a></figure><figure id="e0c896bf-22ba-42bf-a3a8-21e32fc479de"><a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Bracket Pair Colorizer</div><div class="bookmark-description">This extension allows matching brackets to be identified with colours. The user can define which characters to match, and which colours to use. Screenshot: By default (), [], and {} are matched, however custom bracket characters can also be configured. A list of colors can be configured, as well as a specific color for orphaned brackets.</div></div><div class="bookmark-href"><img src="https://marketplace.visualstudio.com/favicon.ico" class="icon bookmark-icon"/>https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer</div></div><img src="https://github.com/CoenraadS/BracketPair/raw/master/images/activeScopeBackground.png" class="bookmark-image"/></a></figure><figure id="b056854e-dd16-4c0f-bc7c-e4d3b1b260b9"><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Code Spell Checker</div></div><div class="bookmark-href"><img src="https://marketplace.visualstudio.com/favicon.ico" class="icon bookmark-icon"/>https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker</div></div><img src="https://streetsidesoftware.gallerycdn.vsassets.io/extensions/streetsidesoftware/code-spell-checker/1.8.0/1582489751804/Microsoft.VisualStudio.Services.Icons.Default" class="bookmark-image"/></a></figure></details></li></ul></li></ul><p id="c1be53bb-db1f-4000-a950-5d3b46c5d60f" class="">git</p><pre id="9da924e4-e3c6-4996-aba4-1dc7855119ea" class="code"><code>node_modules/
+.DS_Store
+.cache/
+dist/
+coverage/
+.vscode/
+.env</code></pre><p id="7a76f8ea-ef6c-4f9d-afaa-53643039a04c" class="">Prettier:</p><pre id="86cb057d-545f-4be6-8e0c-206f355cfc07" class="code"><code>npm run format 
+	&quot;prettier \&quot;src/**/*.{js,html}\&quot; --write&quot;
+npm i -g prettier
+yarn global add prettier</code></pre><p id="84fa95e2-be65-4313-a5bd-236b04146cb3" class="">&quot;format on save, require config =&gt; .prettierrc&quot;</p><p id="53115ddd-5c4a-43f4-9582-1b63ce3e3fef" class="">eslint:</p><pre id="72e50ced-a4ab-4c58-b6dc-9f1c34c86cd0" class="code"><code>npm i -D eslint eslint-config-prettier
+npm run lint
+	&quot;eslint \&quot;src/**/*.{js,jsx}\&quot; --quiet&quot;</code></pre><pre id="71e73c73-6f72-4187-80c2-766d009e8c20" class="code"><code>{
+	&quot;_comment&quot;: &quot;This is the eslintrc.json file for eslint settings (JSON doesn&#x27;t support comments and it should be all data)&quot;
+	&quot;extends&quot;: [&quot;eslint:recommended&quot;, &quot;prettier&quot;, &quot;prettier/react&quot;],
+	&quot;plugins&quot; : [],
+	&quot;parserOptions&quot; : {
+		&quot;ecmaVersion&quot;: 2018,
+		&quot;sourceType&quot; : &quot;module&quot;,
+		&quot;ecmaFeatures&quot;: {
+			&quot;jsx&quot;: true	
+		}
+	},
+	&quot;env&quot;: {
+		&quot;es6&quot;: true,
+		&quot;browser&quot;: true,
+		&quot;node&quot;: true
+	}
+}
+</code></pre><p id="d18b3fe4-780d-45d0-845b-7db5f42646d2" class="">Parcel/babel</p><pre id="fb6f0adb-d541-48e9-aff3-59b27280396e" class="code"><code>yarn global add parcel-bundler
+parcel index.html
+npm install -D babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react</code></pre><p id="8eaa5b75-d2c9-405b-9443-6504d27ce617" class="">
+</p><p id="f269fec0-2d45-4b66-ac88-0ad4c2fbd72d" class="">Fonts and Themes (Just in case you are curious)</p><p id="1ad50524-bc07-4407-b1f4-b57ce5015349" class="">My Font: Fira Code with nerd fonts</p><figure id="4ef9da19-ceb8-48b0-bc76-eab2bf3c7e45"><a href="https://www.nerdfonts.com" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Nerd Fonts - Iconic font aggregator, glyphs/icons collection, &amp; fonts patcher</div><div class="bookmark-description">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</div></div><div class="bookmark-href"><img src="https://www.nerdfonts.com/assets/img/favicon.ico" class="icon bookmark-icon"/>https://www.nerdfonts.com</div></div><img src="https://www.nerdfonts.com/assets/img/sankey-glyphs-combined-diagram.png" class="bookmark-image"/></a></figure><figure id="5e8e8781-daf4-45da-888c-c5a9dc0e8678"><a href="https://github.com/tonsky/FiraCode" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">tonsky/FiraCode</div><div class="bookmark-description">Programmers use a lot of symbols, often encoded with several characters. For the human brain, sequences like -&gt;, &lt;= or := are single logical tokens, even if they take two or three characters on the screen. Your eye spends a non-zero amount of energy to scan, parse and join multiple characters into a single logical one.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/tonsky/FiraCode</div></div><img src="https://repository-images.githubusercontent.com/26500787/bf313080-6b02-11ea-9cd5-c3dca880736d" class="bookmark-image"/></a></figure><p id="47474313-92f8-4d6f-847e-fdbfd6f05ace" class="">My Theme: Nord Theme, solarized dark is also recommended</p><figure id="b64a30be-042c-4392-8fe2-3609cc43ce24"><a href="https://www.nordtheme.com" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Nord</div><div class="bookmark-description">A arctic, north-bluish color palette</div></div><div class="bookmark-href"><img src="https://www.nordtheme.com/icons/icon-48x48.png?v=970545fb8e9518a3616ec74d00cfebc4" class="icon bookmark-icon"/>https://www.nordtheme.com</div></div><img src="https://www.nordtheme.com/static/metadata-banner-d89a20a38202b195c825589db436f0ff.png" class="bookmark-image"/></a></figure><p id="b81e2df6-4251-48c4-a8ff-6c7a08363881" class="">
+</p><figure id="9f05a78e-9a14-4bf4-8f7c-70d7044f180c"><a href="https://www.postman.com" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Postman | The Collaboration Platform for API Development</div><div class="bookmark-description">Make any kind of API call-REST, SOAP, or plain HTTP-and easily inspect even the largest responses. Postman also has built-in support for popular data formats such as OpenAPI GraphQL, and RAML.</div></div><div class="bookmark-href"><img src="https://www.postman.com/favicon-32x32.png?v=9a2f6f2a305951852f949fcec9a89efd" class="icon bookmark-icon"/>https://www.postman.com</div></div><img src="https://assets.getpostman.com/common-share/postman-platform-for-api-development-social-card.jpg" class="bookmark-image"/></a></figure><figure id="b4d187a1-d30b-4b84-aa6f-a63d2ee8e300"><a href="https://createapp.dev" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Create App</div><div class="bookmark-description">Create your own webpack config or Parcel app with React, Vue, Typescript, CSS, SCSS, SASS, less, codesplitting, etc, with this online tool</div></div><div class="bookmark-href"><img src="https://createapp.dev/icons/icon-48x48.png?v=f39f9a83f249ddbc99c44114d6834ba9" class="icon bookmark-icon"/>https://createapp.dev</div></div></a></figure><figure id="99728057-557d-4b9b-9b40-0b722e19f5de"><a href="https://robomongo.org" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Robo 3T | Free, open-source MongoDB GUI (formerly Robomongo)</div><div class="bookmark-description">&quot;I know the guys at 3T well and I know they&#x27;ll do a great job of taking Robomongo forward - I can&#x27;t wait to see the tool develop further through their backing and the support of the great Robomongo community!&quot;</div></div><div class="bookmark-href"><img src="https://robomongo.org/static/favicon-11ace079.ico" class="icon bookmark-icon"/>https://robomongo.org</div></div><img src="https://robomongo.org/static/innovative-autocompletion-f7112563.png" class="bookmark-image"/></a></figure></div></article></body></html>

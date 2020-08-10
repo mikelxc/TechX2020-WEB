@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Color</title>
+        <script>
+            function change(){
+                const color1 = document.getElementById("c1").value
+                const color2 = document.getElementById("c2").value
+                document.body.style.background = `linear-gradient(135deg, ${color1}, ${color2})`
+            }
+        </script>
+        
+    <style>
+        body {
+background: linear-gradient(135deg, orange 60%, cyan);
+}
+body{ text-align:center} 
+.div{ margin:0 auto; width:500px; height:400px} 
+</style> 
+    </head>
+    <body>
+        <h1 class="title">
+            <h1> <p>The Color:</p></h1>
+            <div>
+                <input type="color" id="c1" 
+                    value="#e66465" onchange="change()" >
+                <label for="head">color1</label>
+            </div>
+            
+            <div>
+                <input type="color" id="c2" 
+                        value="#f6b73c" onchange="change()">
+                <label for="body">color2</label>
+            </div>
+            
+    </body>
+</html>
