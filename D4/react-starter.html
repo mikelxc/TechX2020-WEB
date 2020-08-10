@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>React with JSX</title>
+    <style>
+      .blueText {
+        color: blue;
+      }
+    </style>
   </head>
   <body>
     <div id="react-container"></div>
@@ -13,8 +18,39 @@
 
     <script type="text/babel">
       // JSX code here. Or link to separate JavaScript file that contains JSX.
-      const greeting = React.createElement("h1", null, "Hello World");
-      ReactDOM.render(greeting, document.getElementById("react-container"));
+      const greeting = React.createElement(
+        "h1", 
+        {className: "blueText"}, 
+        "Hi there, welcome to TechX web course!"
+      );
+
+      const intro = React.createElement(
+        "h2", 
+        null, 
+        "TechX modern web development, learn react."
+      );
+
+      const agenda = React.createElement(
+        "ul", 
+        null, 
+        React.createElement("li", null, "web framework"), 
+        React.createElement("li", null, "pug"), 
+        React.createElement("li", null, "angular")
+      );
+
+      function techXList() {
+        return React.createElement(
+          "ul", 
+          null, 
+          React.createElement("li", null, "web framework"), 
+          React.createElement("li", null, "pug"), 
+          React.createElement("li", null, "angular")
+        )
+      }
+      ReactDOM.render(
+        React.createElement(techXList, null, null),
+        document.getElementById("react-container"),
+      );
     </script>
   </body>
 </html>
