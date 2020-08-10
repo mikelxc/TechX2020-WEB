@@ -68,7 +68,8 @@
         document.getElementById("react-container")
       ); */
 
-      
+      let res;
+      fetch("https://cat-fact.herokuapp.com/facts?animal_type=cat").then((response)=>{res = response.json()});
     </script>
   </body>
 </html>
