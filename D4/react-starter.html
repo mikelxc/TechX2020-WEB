@@ -72,8 +72,23 @@
           return response.json();
         })
         .then((data) => {
-          console.log(data);
-          console.log(data.drinks[0].idDrink);
+          let i = data;
+          console.log(i);
+          function drinkList() {
+            return React.createElement(
+              "ul",
+              null,
+              React.createElement("li", null, `Name: ${i.drinks[0].strDrink}`),
+              React.createElement("li", null, `Drink ID: ${i.drinks[0].idDrink}`),
+              React.createElement("li", null, `It is ${i.drinks[0].strAlcoholic.toLowerCase()}.`),
+              React.createElement("li", null, `It is a(n) ${i.drinks[0].strCategory.toLowerCase()}.`)
+            );
+          }
+
+          ReactDOM.render(
+            React.createElement(drinkList, null, null),
+            document.getElementById("react-container")
+          );
         });
     </script>
   </body>
