@@ -505,7 +505,7 @@
 				FlyingObject.call(this, x, y, width, height, life, frames, baseFrameCount);
 				this.x = 480 / 2 - this.width / 2;
 				this.y = 650 - this.height - 30;
-				this.shootInterval = 400;
+				this.shootInterval = 360;
 				this.shootLastTime = 0;
 				this.shoot = function() {
 					if (!isActionTime(this.shootLastTime, this.shootInterval)) {
