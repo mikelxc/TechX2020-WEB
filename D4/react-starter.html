@@ -76,7 +76,8 @@
         document.getElementById("react-container")
       ); */
 
-      fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+      //https://www.thecocktaildb.com/api/json/v1/1/random.php
+      fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass")
         .then((response) => {
           return response.json();
         })
