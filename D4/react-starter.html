@@ -19,7 +19,7 @@
     <script type="text/babel">
 
       // JSX code here. Or link to separate JavaScript file that contains JSX.
-      /* const greeting = React.createElement(
+      const greeting = React.createElement(
         "h1", 
         {className: "blueText"}, 
         "Hi there, welcome to TechX web course!"
@@ -48,12 +48,8 @@
           React.createElement("li", null, "angular")
         )
       }
-      ReactDOM.render(
-        React.createElement(techXList, null, null),
-        document.getElementById("react-container"),
-      ); */
 
-      /* let name = "React and JSX";
+      let name = "React and JSX";
       const element = <h1>Welcome to my {name} class</h1>
       const elementOld = React.createElement("h1", null, `Welcome to my ${name} class`);
       const AL = {
@@ -66,9 +62,13 @@
       const element1 = (
         <h1>Hello, {formatName(AL)}!</h1>
       );
-      ReactDOM.render(element1, document.getElementById("react-container")); */
-
       
+      ReactDOM.render(
+        [element, element1, React.createElement(techXList, null, null)],
+        document.getElementById("react-container"),
+      );
+      
+
     </script>
   </body>
 </html>
