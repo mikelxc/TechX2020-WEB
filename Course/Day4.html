@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+<div id="div1">
+
+</div>
+<script>
+    document.body.onload = addElement();
+    function addElement() {
+        let newDiv = document.createElement('div');
+        let newContent = document.createTextNode("Hi there");
+        newDiv.appendChild(newContent)
+        let currentDiv = document.getElementById("div1");
+        document.body.insertBefore(newDiv, currentDiv);
+    }
+</script>
+</body>
+</html>
