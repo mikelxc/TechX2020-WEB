@@ -25,8 +25,8 @@
       const agenda=React.createElement("ul",null,React.createElement("li",null,"web frameworks"))
       // JSX code here. Or link to separate JavaScript file that contains JSX.
       const intro = React.createElement("h2",null,"learn react")
-      ReactDOM.render([grt,intro,agenda],document.getElementById("react-container"))
+      ReactDom.render([grt,intro,agenda],document.getElementById("react-container"))
     </script>
   </body>
-  
+  a
 </html>

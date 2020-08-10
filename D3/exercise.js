@@ -56,13 +56,8 @@ const countriesData = require('./data.json');
 
 // 1- 请找出治愈人数最多的国家
 const countriesData = require('./data.json');
-let num=countriesData.heal;
-let country=countriesData.name;
-function findmax(num,country){
-    var i;
-    return i=+1;
-    if 
-}
+for(data of countriedata)
+if 
 
 
 // TODO: Please write your code below
@@ -73,7 +68,7 @@ function findmax(num,country){
 // 其中sortby参数可选，为一个函数，规定排序方式。
 // 例：
 
-let arr= [2, 100, 12, 244, 7000, 4, 10, 30, 42, 3, 59];
+var arr= [2, 100, 12, 244, 7000, 4, 10, 30, 42, 3, 59];
 // 默认排序方式
 arr.sort();
 // 输出：[10, 100, 12, 2, 244, 3, 30, 4, 42, 59, 7000]
@@ -114,12 +109,12 @@ deathRate.sort(sortby)
 // 然后用getSortBy生成一个"healingRate"字段(heal/confirm)，并根据这个字段降序排序。
 
 // TODO: Please write your code below
-function getSortBy(Data, key, valuefunc){ 
-  for (key in Data)
+function getSortBy(Dat, key, valuefunc){ 
+  for (key in Dat)
     Data[key] = valuefunc(key);
   } 
   const sortby=(a,b)=>b[key]-a[key];
-  return sortby; 
+  getSortBy()
 
 // 4- 我们只需要北美洲的信息
 // 习题：请创建dataAmerica对象，使其中只包含北美的信息。
@@ -138,7 +133,7 @@ console.log(evens); // [2,4]
 // 请用这种方式实现同样的功能
 // TODO: Please write your code below
 const countriesData=require('./data.json');
-const dataAmerica=countriesData.filter(continent=>continent="北美洲")
+const dataAmerica=countriesData.filter((data)=>(data.continent==="北美洲"));
 console.log(dataAmerica)
 
 
@@ -154,8 +149,5 @@ console.log(doubled); // [2, 4, 6, 8]
 // 习题：请用map生成一个只包含json中各个国家名字的list
 // TODO: Please write your code below
 
-const countriesData=require('./data.json')
-let cD = countriesData.stringify
-const getname = cD=>(cD.filter(function(){
-    return cD.name
-}))
+const countryList=countriesData.map((data)=>(data.name))
+console.log(countryList)
