@@ -1,9 +1,14 @@
 import React from "react";
 import Recipe from "./Recipe";
+import State from "./State";
+import Click from "./Click";
+import StarRating from "./StarRating";
 
 function Menu({ recipes }) {
   return (
     <article>
+      <State />
+      <Click />
       <header>
         <h1>Delicious Recipes</h1>
       </header>
@@ -11,6 +16,7 @@ function Menu({ recipes }) {
         {recipes.map((recipe, i) => (
           <Recipe key={i} {...recipe} />
         ))}
+        <StarRating />
       </div>
     </article>
   );
