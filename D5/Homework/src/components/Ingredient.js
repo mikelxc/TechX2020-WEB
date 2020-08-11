@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Ingredient({ strDrink, strDrinkThumb, idDrink }) {
+export default function Ingredient({ strDrink, idDrink }) {
   return (
     <li>
-      {strDrink} {strDrinkThumb} {idDrink}
+      Name: {strDrink}, ID: {idDrink}
     </li>
   );
 }

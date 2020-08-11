@@ -4,10 +4,6 @@ import State from "./State";
 function Menu({ recipes }) {
   return (
     <article>
-      <State />
-      <header>
-        <h1>Delicious Recipes</h1>
-      </header>
       <div className="recipes">
         {recipes.map((recipe, i) => (
           <Recipe key={i} {...recipe} />
