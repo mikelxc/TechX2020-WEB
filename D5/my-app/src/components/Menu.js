@@ -1,16 +1,19 @@
-import React from 'react';
+import React from "react";
+import Recipe from "./Recipe";
 
 function Menu({ recipes }) {
-    return (
+  return (
     <article>
-        <header>
-        <h1>TechX Web Recipes</h1>
-        </header>
-        <div className="recipes">
-            {recipes.map((recipes, i) => <Recipe key={i} {...recipes} />)}
-        </div>
+      <header>
+        <h1>Delicious Recipes</h1>
+      </header>
+      <div className="recipes">
+        {recipes.map((recipe, i) => (
+          <Recipe key={i} {...recipe} />
+        ))}
+      </div>
     </article>
-    );
+  );
 }
 
 export default Menu;
