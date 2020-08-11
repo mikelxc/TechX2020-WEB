@@ -1,8 +1,7 @@
-/*
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+/*
 class App extends Component {
   constructor (props) {
     super(props)
@@ -51,3 +50,36 @@ function A(props) {
 }
 export default App;
 */
+
+fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    let i = data;
+    let thumb = i.drinks[0].strDrinkThumb;
+    console.log(i);
+    function drinkList() {
+      return React.createElement(
+        "ul",
+        null,
+        React.createElement("li", null, `Name: ${i.drinks[0].strDrink}`),
+        React.createElement("li", null, `Drink ID: ${i.drinks[0].idDrink}`),
+        React.createElement(
+          "li",
+          null,
+          `It is ${i.drinks[0].strAlcoholic.toLowerCase()}.`
+        ),
+        React.createElement(
+          "li",
+          null,
+          `It is a(n) ${i.drinks[0].strCategory.toLowerCase()}.`
+        )
+      );
+    }
+    document.getElementById("thumbnail").src = thumb;
+    ReactDOM.render(
+      React.createElement(drinkList, null, null),
+      document.getElementById("react-container")
+    );
+  });
