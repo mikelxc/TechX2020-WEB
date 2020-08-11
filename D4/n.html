@@ -49,14 +49,14 @@
             </article>
         )
     }
-    ReactDom.render(<Menu recipes={data} title="DF"/>,document.getElementById("react-container"))
+    ReactDOM.render(<Menu recipes={data} title="DF"/>,document.getElementById("react-container"))
     function Recipe({name,ingredients,steps})
         return (
             <section id={name.toLowerCase().replace(/ /g,"-")}>
                 <h1>{name}</h1>
                 <ul className="ingredients">
                         {ingredients.map((ingredient,i)=>(
-                            <li key={i}>{ingredient.name}</li
+                            <li key={i}>{ingredient.name}</li>
                         ))}
                 </ul>
             </section>
