@@ -2,11 +2,11 @@ import React from "react";
 import IngredientsList from "./IngredientsList";
 import Instructions from "./Instructions";
 
-function Recipe({ name, ingredients, steps }) {
+function Recipe({ name, drinks, steps }) {
   return (
     <section id={name.toLowerCase().replace(/ /g, "-")}>
       <h1>{name}</h1>
-      <IngredientsList list={ingredients} />
+      <IngredientsList list={drinks} />
       <Instructions title="Cooking Instructions" steps={steps} />
     </section>
   );

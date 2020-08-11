@@ -1,5 +1,6 @@
 [
   {
+    "name": "Baked Salmon",
     "drinks": [
       {
         "strDrink": "Afterglow",
@@ -291,6 +292,14 @@
         "strDrinkThumb": "https:\/\/www.thecocktaildb.com\/images\/media\/drink\/trttrv1441254466.jpg",
         "idDrink": "12728"
       }
+    ],
+    "steps": [
+      "Preheat the oven to 350 degrees.",
+      "Spread the olive oil around a glass baking dish.",
+      "Add the yellow squash and place in the oven for 30 mins.",
+      "Add the salmon, garlic, and pine nuts to the dish.",
+      "Bake for 15 minutes.",
+      "Remove from oven. Add the lettuce and serve."
     ]
   }
 ]
