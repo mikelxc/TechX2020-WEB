@@ -1,0 +1,8 @@
+{
+  "name": "NASA",
+  "version": "1.0.0",
+  "description": "pictures",
+  "main": "index.js",
+  "repository": "https://github.com/ericzhy0815/TechX2020-WEB.git",
+  "license": "MIT"
+}

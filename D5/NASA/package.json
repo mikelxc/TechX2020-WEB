@@ -1,0 +1,7 @@
+{
+  "name": "NASA",
+  "version": "1.0.0",
+  "description": "pictures",
+  "main": "index.js",
+  "license": "MIT"
+}
