@@ -1,6 +1,6 @@
 import React from "react";
 import Recipe from "./Recipe";
-import State from "./state";
+import State from "./State.js";
 function Menu({ recipes }) {
   return (
     <article>
