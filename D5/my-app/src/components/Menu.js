@@ -7,7 +7,7 @@ function Menu({ recipes }) {
         <h1>TechX Web Recipes</h1>
         </header>
         <div className="recipes">
-            {recipes.map((recipes, i) => <Recipe key={i} {...recipe} />)}
+            {recipes.map((recipes, i) => <Recipe key={i} {...recipes} />)}
         </div>
     </article>
     );
