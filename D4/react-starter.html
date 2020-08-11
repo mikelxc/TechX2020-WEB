@@ -77,7 +77,8 @@
       ); */
 
       //https://www.thecocktaildb.com/api/json/v1/1/random.php
-      fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass")
+      //https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass
+      fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
         .then((response) => {
           return response.json();
         })
