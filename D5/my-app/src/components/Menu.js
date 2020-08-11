@@ -1,9 +1,10 @@
 import React from "react";
 import Recipe from "./Recipe";
-
+import State from "./state";
 function Menu({ recipes }) {
   return (
     <article>
+      <State />
       <header>
         <h1>Delicious Recipes</h1>
       </header>
