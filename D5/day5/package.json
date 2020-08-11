@@ -11,5 +11,10 @@
   "scripts": {
     "dev": "parcel index.js",
     "build": "parcel build index.js"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icon": "^3.10.0"
   }
 }
