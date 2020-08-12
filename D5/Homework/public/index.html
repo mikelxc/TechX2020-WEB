@@ -9,9 +9,6 @@
   <link rel="shortcut icon" href="./favicon.ico">
   <title>React + Parcel App</title>
   <style>
-    body {
-      background: linear-gradient(to bottom, pink, ivory); 
-    }
     #title {
       font-size: xx-large;
       font-family: Apple Chancery, cursive;
@@ -23,26 +20,18 @@
       text-align: center;
       list-style-type: none;
     }
+    article {
+      margin-top: -35px;
+    }
   </style>
 </head>
 
-<body onclick="changeColor()" id="body">
+<body>
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
   <div id="root"></div>
   <script type="text/javascript" src="../src/index.js"></script>
-  <script>
-    let color = "pink";
-    let changeColor = function() {
-      if(color==="pink") {
-        color = "purple";
-      } else {
-        color = "pink";
-      }
-      document.getElementById('body').style.setProperty('background', `linear-gradient(to bottom, ${color}, ivory)`);
-    }
-  </script>
 </body>
 
 </html>
