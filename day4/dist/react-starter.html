@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React with JSX</title>
+    <style>.blueText{
+        color: blue
+      }</style>
+  </head>
+  <body>
+    <div id="react-container"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <script type="text/babel">
+      // JSX code here. Or link to separate JavaScript file that contains JSX.
+
+      
+      //const greeting = React.createElement("h1", {className: "blueText"}, "Hi there, welcome to TechX web course.");
+      //pass null because we don't have anything to pass to 2nd parameter.
+      //const intro = React.createElement("h2", null, "TechX Modern Web Development: learn React");
+      //const agenda = React.createElement('ul', 
+      //null, 
+      //React.createElement("li", null, "web framework"),
+      //React.createElement("li", null, "pug"),
+      //React.createElement("li", null, "angular")
+      //);
+      //function techXList(){
+      //  return React.createElement('ul', 
+      //null, 
+      //React.createElement("li", null, "web framework"),
+      //React.createElement("li", null, "pug"),
+      //React.createElement("li", null, "angular")
+      //);
+      //}
+     // ReactDOM.render([greeting, intro, agenda], document.getElementById("react-container"));
+      //ReactDOM.render(React.createElement(techXList,null,null),
+      //document.getElementById("react-container"));
+      //JSX
+
+
+    let name = "React and JSX"
+    //const element = React.createElement("h1", null, `Welcome to my ${name} class`)
+    const element = <h1> Welcome to my {name} class</h1>
+    const AL = {
+      firstName: "Aego",
+      lastName: "Yu"
+    };
+    function formatName(user){
+      if(user)
+        return user.firstName + " " + user.lastName;
+    };
+    function greetUser(user){
+      if(user)
+        return <h1>Hello, {formatName(user)}!</h1>;
+      else
+        return <h1>Hello stranger, please log in!</h1>;
+    }
+    const element1 = (greetUser(AL));
+    ReactDOM.render([element,element1], document.getElementById("react-container"));
+
+    function Menu(props){
+      return(
+        <article>
+          <header><h1>{props.title}</h1></header>
+          <div className = "recipes">
+            {props.recipes.map((recipe, i)=>(
+              <Recipe 
+              key={i}
+              name={recipe.name}
+              ingredients={recipe.ingredients}
+              steps={recipe.steps}
+              />
+            ))}
+          </div>
+        </article>
+      )
+    }
+    function Recipe({name, ingredients, steps}){
+      return(
+        <section id={name.toLowerCase().replace(/ /g,"-")}>
+          <h1>{name}</h1>
+          <ul className = "ingredients">
+            {ingredients.map((ingredient,i)=>(
+            <li key={i}>{ingredient.name}</li>
+            ))}
+          </ul>
+        </section> 
+      );
+    }
+    ReactDOM.render(<Menu recipes = {data} title ="delicious food"/>, document.getElementById("react-container"));
+    </script>
+  </body>
+</html>
