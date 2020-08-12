@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import IngredientsList from "./IngredientsList";
+import DrinksList from "./DrinksList";
 
-function Recipe({ name, drinks, steps }) {
+function Recipe({ name, drinks }) {
   const [isPink, setIsPink] = useState(true);
   return (
     <section id={name.toLowerCase().replace(/ /g, "-")}
@@ -9,7 +9,7 @@ function Recipe({ name, drinks, steps }) {
       style={{ background: isPink ? "linear-gradient(to bottom, pink, white)" : "linear-gradient(to bottom, purple, white)" }}
     >
       <h1 id="title">{name}</h1>
-      <IngredientsList list={drinks} />
+      <DrinksList list={drinks} />
     </section>
   );
 }

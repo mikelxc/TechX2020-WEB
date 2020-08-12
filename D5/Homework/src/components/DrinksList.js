@@ -1,11 +1,11 @@
 import React from "react";
-import Ingredient from "./Ingredient";
+import Drink from "./Drink";
 
-export default function IngredientsList({ list }) {
+export default function DrinksList({ list }) {
   return (
     <ul className="drinks" class="list">
-      {list.map((ingredient, i) => (
-        <Ingredient key={i} {...ingredient} />
+      {list.map((drink, i) => (
+        <Drink key={i} {...drink} />
         // <Ingredient
         //   amount={ingredient.amount}
         //   measurement={ingredient.measurement}

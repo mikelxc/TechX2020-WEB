@@ -1,11 +1,11 @@
 import React from "react";
-import Recipe from "./Recipe";
+import Gradient from "./Gradient";
 function Menu({ recipes }) {
   return (
     <article>
       <div className="recipes">
         {recipes.map((recipe, i) => (
-          <Recipe key={i} {...recipe} />
+          <Gradient key={i} {...recipe} />
         ))}
       </div>
     </article>

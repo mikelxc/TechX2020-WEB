@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Ingredient({ strDrink, idDrink }) {
+export default function Drink({ strDrink, idDrink }) {
   return (
     <li>
       Name: {strDrink}, ID: {idDrink}
