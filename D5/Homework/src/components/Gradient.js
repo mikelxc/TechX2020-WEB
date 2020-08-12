@@ -6,7 +6,7 @@ function Recipe({ name, drinks }) {
   return (
     <section id={name.toLowerCase().replace(/ /g, "-")}
       onClick={() => setIsPink(!isPink)}
-      style={{ background: isPink ? "linear-gradient(to bottom, pink, white)" : "linear-gradient(to bottom, purple, white)" }}
+      style={{ background: isPink ? "linear-gradient(to bottom, pink, white)" : "linear-gradient(to bottom, violet, white)" }}
     >
       <h1 id="title">{name}</h1>
       <DrinksList list={drinks} />
