@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dom</title>
+    </head>
+    <body>
+        <div id="div1">
+            <p>This is div1.</p>
+        </div>
+    <script>
+        document.body.onload = addElement();
+        function addElement(){
+            let newDiv = document.createElement('div');
+            let newContent = document.createTextNode('Hi there!Welcome to TechX 2020 Web Dev.');
+            newDiv.appendChild(newContent);
+            let currentDiv = document.getElementById('div1');
+            document.body.insertBefore(newDiv, currentDiv);
+        }
+        
+    </script>
+    
+    </body>
+    
+</html>

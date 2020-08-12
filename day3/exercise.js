@@ -127,7 +127,7 @@ countriesData.sort(sortbyHealingRate);
 // TODO: Please write your code below
 let dataAmerica = [];
 for(let i = 0;i <countriesData.length; i++){
-    if(countriesData[i].continent == "北美洲")
+    if(countriesData[i].continent === "北美洲")
         dataAmerica.push(countriesData[i]);
 }
 console.log(dataAmerica);
@@ -137,12 +137,12 @@ console.log(dataAmerica);
 // Returns an iterable of the same type. An item will appear in the returned iterable only if the returned value for the item is true 
 // 例
 const numbers = [1, 2, 3, 4];
-const evens = numbers.filter(item => item % 2 == 0);
+const evens = numbers.filter(item => item % 2 === 0);
 //console.log(evens); // [2,4]
 
 // 请用这种方式实现同样的功能
 // TODO: Please write your code below
-const getAmerica = countriesData.filter(country => country.continent == "北美洲");
+const getAmerica = countriesData.filter(country => country.continent === "北美洲");
 console.log(getAmerica);
 
 // 5- Map 函数
