@@ -11,7 +11,7 @@ export default function Unit(props) {
         <h2 id="description" className="title">{props.title}</h2>
         <p id="description" className="description">{props.description}</p>
         <button type="button"
-          onclick="document.getElementById('description').style.color = 'blue'"></button>
+          onClick="document.getElementById('description').style.color = 'blue'"></button>
       </div>
 
   );

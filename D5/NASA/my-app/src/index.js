@@ -18,6 +18,9 @@ const App = ({}) => (
       <Link to="gallery">gallery  </Link>
       <Link to="dashboard">Dashboard</Link>
     </nav>
+    <h1 className="O"><center>
+      The Beauties of Our Universe
+    </center></h1>
 
     <Router>
       <Gallery path="gallery" picture={NASAJson} />

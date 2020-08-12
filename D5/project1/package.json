@@ -1,0 +1,9 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "http-status-codes": "^1.4.0"
+  }
+}

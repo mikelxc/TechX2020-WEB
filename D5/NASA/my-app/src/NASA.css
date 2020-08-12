@@ -43,7 +43,7 @@ body{
     color: #fff;
     border-radius: 5px;
     padding: 20px;
-    font-size: 150%;
+    font-size: 100%;
     width: 424px;
     height: 700px;
     overflow-y: scroll;
@@ -95,8 +95,8 @@ body{
 
 /* Style the "active" element to highlight the current page */
 .topnav a.active {
-    background-color: #2196F3;
-    color: white;
+    background-color: white;
+    color:black;
 }
 
 /* Style the search box inside the navigation bar */

@@ -4,5 +4,8 @@
   "description": "pictures",
   "main": "index.js",
   "repository": "https://github.com/ericzhy0815/TechX2020-WEB.git",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@reach/router": "^1.3.4"
+  }
 }
