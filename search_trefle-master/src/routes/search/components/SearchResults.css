@@ -1,0 +1,9 @@
+.search-results {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+}
+/* .result-container {
+    padding: 20px;
+} */
