@@ -1,0 +1,10 @@
+{
+  "name": "express-router-app",
+  "version": "1.0.0",
+  "description": "A small router with express",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
