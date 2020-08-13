@@ -6,10 +6,10 @@ const port=3000,
 	router=require("./router"),
 	fs=require("fs"),
 	plainTextContentType={
-		"Content-Type":"text/plain"
+		"Content-Type":"text/plain",
 	},
 	htmlContentType={
-		"Content-Type":"text/html"
+		"Content-Type":"text/html",
 	},
 	customReadFile=(file,res)=>{
 		fs.readFile(`./${file}`,(errors,data)=>{
@@ -19,9 +19,9 @@ const port=3000,
 			res.end(data);
 		});
 	};
-router.get("/index.html",(req,res)=>{
+router.get("views/index.html",(req,res)=>{
 	res.writeHead(httpStatus.OK,htmlContentType);
-	customReadFile("views/index.html",res);
+	customReadFile("/index.html",res);
 });
 http.createServer(router.handle).listen(port);
 console.log(`The server is listening on port numbers:${port}`);

@@ -1,0 +1,15 @@
+{
+  "name": "express-router",
+  "version": "1.0.0",
+  "description": "a router",
+  "main": "main.js",
+  "author": "ez",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

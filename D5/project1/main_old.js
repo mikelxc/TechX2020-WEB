@@ -23,4 +23,4 @@ const port=3000,
   });
 
 app.listen(port);
-console.log('The server has started and is listening on port ${port}`')
+console.log(`The server has started and is listening on port ${port}`)
