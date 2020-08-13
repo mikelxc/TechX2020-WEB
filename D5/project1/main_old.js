@@ -1,7 +1,7 @@
 "use strict";
 
 const routeResponseMap={
-	"/info";"<h1>Info Page</h1>",
+	"/info":"<h1>Info Page</h1>",
 	"/contact":"<h1>Contact Page</h1>",
 	"/about":"<h1>About Page</h1>",
 	"/error":"<h1>Error</h1>",
@@ -23,5 +23,4 @@ const port=3000,
   });
 
 app.listen(port);
-console.log('The server has started and is listening on port ${port}`);
-
+console.log('The server has started and is listening on port ${port}`')

@@ -10,7 +10,7 @@ const httpStatus=require("http-status-codes"),
 				res.writeHead(httpStatus.OK,{
 					"Content-Type":"text/plain"
 				});
-				res.end("Welcome to the info page");
+				res.end("Welcome to my info page");
 			}
 		},
 		POST:{}

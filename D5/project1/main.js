@@ -19,12 +19,8 @@ const port=3000,
 			res.end(data);
 		});
 	};
-router.get("/",(req,res)=>{
-	res.writeHead(httpStatus.OK,plainTextContentType);
-	res.end("INDEX");
-});
 router.get("/index.html",(req,res)=>{
-	res.writeHead(httpStatus.OK,htmlTextContent);
+	res.writeHead(httpStatus.OK,htmlContentType);
 	customReadFile("views/index.html",res);
 });
 http.createServer(router.handle).listen(port);
