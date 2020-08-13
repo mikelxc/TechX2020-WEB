@@ -1,0 +1,11 @@
+{
+  "name": "my-little-server",
+  "version": "1.0.0",
+  "description": "Serve my little project",
+  "main": "main.js",
+  "author": "Freddie Yu",
+  "license": "MIT",
+  "dependencies": {
+    "http-status-codes": "^1.4.0"
+  }
+}
