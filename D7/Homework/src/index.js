@@ -28,4 +28,3 @@ fetch("http://localhost:1337/classes")
     });
 
 serviceWorker.unregister();
-
