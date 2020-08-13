@@ -7,20 +7,23 @@
       .blueText {
         color: blue;
       }
+
       #react-container {
         margin-top: -16px;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Times New Roman", Times, serif;
       }
+
       h1 {
         margin-top: -10px;
         font-family: Apple Chancery, cursive;
       }
     </style>
   </head>
+
   <body>
-    <h1>Getting to Know a RANDOM Drink</h1>
-    <div id="react-container"></div>
-    <img src="" id="thumbnail" height="300px" width="250px">
+    <h1>My Own API Created Using Strapi</h1>
+    <div id="react-container1"></div>
+    <div id="react-container2"></div>
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
@@ -28,79 +31,77 @@
     <script type="text/babel">
       // JSX code here. Or link to separate JavaScript file that contains JSX.
       /* const greeting = React.createElement(
-        "h1", 
-        {className: "blueText"}, 
-        "Hi there, welcome to TechX web course!"
-      );
+      "h1", 
+      {className: "blueText"}, 
+      "Hi there, welcome to TechX web course!"
+    );
 
-      const intro = React.createElement(
-        "h2", 
-        null, 
-        "TechX modern web development, learn react."
-      );
+    const intro = React.createElement(
+      "h2", 
+      null, 
+      "TechX modern web development, learn react."
+    );
 
-      const agenda = React.createElement(
+    const agenda = React.createElement(
+      "ul", 
+      null, 
+      React.createElement("li", null, "web framework"), 
+      React.createElement("li", null, "pug"), 
+      React.createElement("li", null, "angular")
+    );
+
+    function techXList() {
+      return React.createElement(
         "ul", 
         null, 
         React.createElement("li", null, "web framework"), 
         React.createElement("li", null, "pug"), 
         React.createElement("li", null, "angular")
-      );
+      )
+    }
 
-      function techXList() {
-        return React.createElement(
-          "ul", 
-          null, 
-          React.createElement("li", null, "web framework"), 
-          React.createElement("li", null, "pug"), 
-          React.createElement("li", null, "angular")
-        )
-      }
-
-      let name = "React and JSX";
-      const element = <h1>Welcome to my {name} class</h1>
-      const elementOld = React.createElement("h1", null, `Welcome to my ${name} class`);
-      const AL = {
-        firstName: "Aego",
-        lastName: "Yu"
-      };
-      function formatName(user) {
-          return user.firstName + " " + user.lastName;
-      };
-      const element1 = (
-        <h1>Hello, {formatName(AL)}!</h1>
-      );
-      
-      ReactDOM.render(
-        [element, element1, React.createElement(techXList, null, null)],
-        document.getElementById("react-container")
-      ); */
+    let name = "React and JSX";
+    const element = <h1>Welcome to my {name} class</h1>
+    const elementOld = React.createElement("h1", null, `Welcome to my ${name} class`);
+    const AL = {
+      firstName: "Aego",
+      lastName: "Yu"
+    };
+    function formatName(user) {
+        return user.firstName + " " + user.lastName;
+    };
+    const element1 = (
+      <h1>Hello, {formatName(AL)}!</h1>
+    );
+    
+    ReactDOM.render(
+      [element, element1, React.createElement(techXList, null, null)],
+      document.getElementById("react-container")
+    ); */
 
       //https://www.thecocktaildb.com/api/json/v1/1/random.php
       //https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass
-      fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+      fetch("http://localhost:1337/classes")
         .then((response) => {
           return response.json();
         })
         .then((data) => {
-          let i = data;
-          let thumb = i.drinks[0].strDrinkThumb;
-          console.log(i);
-          function drinkList() {
-            return React.createElement(
-              "ul",
-              null,
-              React.createElement("li", null, `Name: ${i.drinks[0].strDrink}`),
-              React.createElement("li", null, `Drink ID: ${i.drinks[0].idDrink}`),
-              React.createElement("li", null, `It is ${i.drinks[0].strAlcoholic.toLowerCase()}.`),
-              React.createElement("li", null, `It is a(n) ${i.drinks[0].strCategory.toLowerCase()}.`)
+          for (let i = 0; i < data.length; i++) {
+            let l1 = data[i].id;
+            let l2 = data[i].classname;
+            let l5 = data[i].classimg[0].name;
+            const element = (
+              <ul>
+                <li>ID : {l1}</li>
+                <li>Class Name : {l2}</li>
+                <img src={l5}></img>
+              </ul>
+            );
+            ReactDOM.render(
+              element,
+              document.getElementById(`react-container${i+1}`)
             );
           }
-          document.getElementById('thumbnail').src = thumb;
-          ReactDOM.render(
-            React.createElement(drinkList, null, null),
-            document.getElementById("react-container")
-          );
         });
     </script>
   </body>

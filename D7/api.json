@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "classname": "Cambridge",
+        "startDate": null,
+        "endDate": null,
+        "created_by": {
+            "id": 1,
+            "firstname": "Freddie",
+            "lastname": "Yu",
+            "username": null
+        },
+        "updated_by": {
+            "id": 1,
+            "firstname": "Freddie",
+            "lastname": "Yu",
+            "username": null
+        },
+        "created_at": "2020-08-13T05:28:03.150Z",
+        "updated_at": "2020-08-13T05:33:51.230Z",
+        "classimg": [
+            {
+                "id": 1,
+                "name": "https://tse2-mm.cn.bing.net/th/id/OIP.RwiAP2SbaZNgDbTlx0AU1gHaFj?w=236&h=180&c=7&o=5&dpr=2&pid=1.7",
+                "alternativeText": "",
+                "caption": "",
+                "width": 236,
+                "height": 176,
+                "formats": {
+                    "thumbnail": {
+                        "name": "thumbnail_https://tse2-mm.cn.bing.net/th/id/OIP.RwiAP2SbaZNgDbTlx0AU1gHaFj?w=236&h=180&c=7&o=5&dpr=2&pid=1.7",
+                        "hash": "thumbnail_OIP_Rwi_AP_2_Sba_Z_Ng_Db_Tlx0_AU_1g_Ha_Fj_w_236_and_h_180_and_c_7_and_o_5_and_dpr_2_and_pid_1_de50dd7aaf",
+                        "ext": ".7",
+                        "mime": "image/jpeg",
+                        "width": 209,
+                        "height": 156,
+                        "size": 8.7,
+                        "path": null,
+                        "url": "/uploads/thumbnail_OIP_Rwi_AP_2_Sba_Z_Ng_Db_Tlx0_AU_1g_Ha_Fj_w_236_and_h_180_and_c_7_and_o_5_and_dpr_2_and_pid_1_de50dd7aaf.7"
+                    }
+                },
+                "hash": "OIP_Rwi_AP_2_Sba_Z_Ng_Db_Tlx0_AU_1g_Ha_Fj_w_236_and_h_180_and_c_7_and_o_5_and_dpr_2_and_pid_1_de50dd7aaf",
+                "ext": ".7",
+                "mime": "image/jpeg",
+                "size": 9.52,
+                "url": "/uploads/OIP_Rwi_AP_2_Sba_Z_Ng_Db_Tlx0_AU_1g_Ha_Fj_w_236_and_h_180_and_c_7_and_o_5_and_dpr_2_and_pid_1_de50dd7aaf.7",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "created_by": 1,
+                "updated_by": 1,
+                "created_at": "2020-08-13T05:33:42.235Z",
+                "updated_at": "2020-08-13T05:33:42.276Z"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "classname": "FullstackDevelopment",
+        "startDate": null,
+        "endDate": null,
+        "created_by": {
+            "id": 1,
+            "firstname": "Freddie",
+            "lastname": "Yu",
+            "username": null
+        },
+        "updated_by": {
+            "id": 1,
+            "firstname": "Freddie",
+            "lastname": "Yu",
+            "username": null
+        },
+        "created_at": "2020-08-13T05:38:35.196Z",
+        "updated_at": "2020-08-13T05:38:35.219Z",
+        "classimg": [
+            {
+                "id": 2,
+                "name": "https://tse4-mm.cn.bing.net/th/id/OIP.j18U6uvAg-ta2XBvDKNQlAHaEK?w=319&h=180&c=7&o=5&dpr=2&pid=1.7",
+                "alternativeText": "",
+                "caption": "",
+                "width": 319,
+                "height": 179,
+                "formats": {
+                    "thumbnail": {
+                        "name": "thumbnail_https://tse4-mm.cn.bing.net/th/id/OIP.j18U6uvAg-ta2XBvDKNQlAHaEK?w=319&h=180&c=7&o=5&dpr=2&pid=1.7",
+                        "hash": "thumbnail_OIP_j18_U6uv_Ag_ta2_X_Bv_DKN_Ql_A_Ha_EK_w_319_and_h_180_and_c_7_and_o_5_and_dpr_2_and_pid_1_b518bbc5b9",
+                        "ext": ".7",
+                        "mime": "image/jpeg",
+                        "width": 245,
+                        "height": 137,
+                        "size": 6.11,
+                        "path": null,
+                        "url": "/uploads/thumbnail_OIP_j18_U6uv_Ag_ta2_X_Bv_DKN_Ql_A_Ha_EK_w_319_and_h_180_and_c_7_and_o_5_and_dpr_2_and_pid_1_b518bbc5b9.7"
+                    }
+                },
+                "hash": "OIP_j18_U6uv_Ag_ta2_X_Bv_DKN_Ql_A_Ha_EK_w_319_and_h_180_and_c_7_and_o_5_and_dpr_2_and_pid_1_b518bbc5b9",
+                "ext": ".7",
+                "mime": "image/jpeg",
+                "size": 8.09,
+                "url": "/uploads/OIP_j18_U6uv_Ag_ta2_X_Bv_DKN_Ql_A_Ha_EK_w_319_and_h_180_and_c_7_and_o_5_and_dpr_2_and_pid_1_b518bbc5b9.7",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "created_by": 1,
+                "updated_by": 1,
+                "created_at": "2020-08-13T05:38:30.225Z",
+                "updated_at": "2020-08-13T05:38:30.264Z"
+            }
+        ]
+    }
+]
