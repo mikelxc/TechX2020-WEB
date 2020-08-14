@@ -12,12 +12,12 @@ fetch("http://localhost:1337/classes")
         for (let i = 0; i < data.length; i++) {
             let l1 = data[i].ranking;
             let l2 = data[i].classname;
-            let l5 = data[i].classimg[0].name;
+            let l3 = data[i].classimg[0].name;
             const element = (
                 <ul>
                     <li>Ranking: {l1}</li>
                     <li>University Name: {l2}</li>
-                    <img src={l5}></img>
+                    <img src={l3}></img>
                 </ul>
             );
             ReactDOM.render(
