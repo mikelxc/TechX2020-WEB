@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
   "name": "express",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Freddie Yu",
+=======
+  "name": "express-router-app",
+  "version": "1.0.0",
+  "description": "A small router with express",
+  "main": "main.js",
+>>>>>>> upstream/master
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
