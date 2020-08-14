@@ -28,6 +28,9 @@
     },
     "endDate": {
       "type": "datetime"
+    },
+    "ranking": {
+      "type": "string"
     }
   }
 }
