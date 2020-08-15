@@ -1,5 +1,5 @@
-import React from 'react'
-import axios from 'axios'
+import React from 'react';
+import axios from 'axios';
 
 /**
  * Return percent of value / total
@@ -49,7 +49,7 @@ export default class FileUpload extends React.Component{
             <div className="FileUpload">
                 <form onSubmit={this.handleSubmit}>
                     <input onChange={this.handleChange} type="file" />
-                    <button>Submit</button>
+                    <button className="fnt">Submit</button>
                 </form>
                 {submitted &&
                      <div className="Progress">
@@ -58,7 +58,7 @@ export default class FileUpload extends React.Component{
                 }
                
                 {loading &&
-                    <p>Uploading...</p>
+                    <p className="fnt2">Uploading...</p>
                 }
             </div>
         )

@@ -1,6 +1,7 @@
 .App{
   display: flex;
   min-height: 100vh;
+  font-family:"Comic Sans MS", cursive, sans-serif;
 }
 .V_Center{
   flex: 1;
@@ -9,7 +10,7 @@
 .FileUpload{
   border: 1px solid #eee;
   border-radius: 2px;
-  max-width: 300px;
+  max-width: 330px;
   margin: auto;
 
   padding: 12px 24px;
@@ -26,3 +27,16 @@
 .Progress__Seek{
   background-color: green;
 }
+
+#img{
+  background-image:url("https://techx-2.kevincdn.cn/assets/img/background1.jpg")
+}
+
+.fnt{
+  font-family:"Comic Sans MS", cursive, sans-serif;
+  }
+
+.fnt2{
+  font-family:"Comic Sans MS", cursive, sans-serif;
+  color:white;
+  }
