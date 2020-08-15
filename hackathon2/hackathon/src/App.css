@@ -1,0 +1,28 @@
+.App{
+  display: flex;
+  min-height: 100vh;
+}
+.V_Center{
+  flex: 1;
+  align-self: center;
+}
+.FileUpload{
+  border: 1px solid #eee;
+  border-radius: 2px;
+  max-width: 300px;
+  margin: auto;
+
+  padding: 12px 24px;
+}
+
+.Progress,
+.Progress__Seek{
+  height: 3px;
+}
+.Progress{
+  background-color: #eee;
+  margin: 24px;
+}
+.Progress__Seek{
+  background-color: green;
+}
