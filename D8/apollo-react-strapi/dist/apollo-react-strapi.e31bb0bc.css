@@ -1,0 +1,87 @@
+
+body{
+    background-color:navajowhite;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-left: 10%;
+}
+/* p {
+    background: rgb(139, 157, 187);
+    padding: 50px;
+    margin: 15px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    background-color: rgb(50, 61, 81);
+    padding: 25px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+h2 {
+    background-color: rgb(50, 61, 81);
+    padding: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+section {
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(50, 61, 81);
+    color: white;
+    font-family: verdana, sans-serif;
+    text-align: center;
+} */
+div.dk-loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.dk-loading div {
+  border-top: 15px solid;
+  padding: 5px;
+  border-radius: 20px;
+  animation: loading-spin 3s ease-in-out infinite;
+}
+div.dk-loading .yellow {
+  border-color: #ffb400;
+}
+div.dk-loading .violet {
+  border-color: #574587;
+}
+div.dk-loading .red {
+  border-color: #f2665e;
+}
+div.dk-loading .circle {
+  /*   border-radius: 10rem;
+  border-width: 15px;
+  border-style: solid; */
+  border: 15px solid #574587;
+}
+
+@keyframes loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(270deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=/apollo-react-strapi.e31bb0bc.css.map */

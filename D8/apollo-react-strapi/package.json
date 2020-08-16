@@ -1,0 +1,49 @@
+{
+  "name": "apollo-react-strapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Colin Fang",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/client": "^3.1.3",
+    "@bit/campgladiator.cgui.components.atoms.button": "^0.0.16",
+    "@bit/campgladiator.cgui.components.atoms.card": "^0.0.2",
+    "@bit/creative-tim.argon-dashboard-react.card-default": "^1.0.0",
+    "@bit/darskakaoo.dollop.loading": "^1.0.1",
+    "@bit/mui-org.material-ui.button": "^4.9.10",
+    "@bit/mui-org.material-ui.card": "^4.9.10",
+    "@bit/mui-org.material-ui.card-action-area": "^4.9.10",
+    "@bit/mui-org.material-ui.card-actions": "^4.9.10",
+    "@bit/mui-org.material-ui.card-content": "^4.9.10",
+    "@bit/mui-org.material-ui.card-media": "^4.9.10",
+    "@bit/mui-org.material-ui.styles": "^4.9.10",
+    "@bit/mui-org.material-ui.typography": "^4.9.10",
+    "@bit/react-bootstrap.react-bootstrap.button": "^1.0.0",
+    "@bit/react-bootstrap.react-bootstrap.card": "^1.0.0",
+    "@bit/react-bootstrap.react-bootstrap.internal.style-links": "^1.0.0",
+    "@bit/seewhycy.custom-react-fetch-hook.loading": "^1.0.17",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^14.0.0 || ^15.0.0",
+    "react": "^16.8.0",
+    "react-apollo": "^3.1.5",
+    "react-dom": "^16.8.0",
+    "react-responsive-masonry": "^2.1.0",
+    "subscriptions-transport-ws": "^0.9.0"
+  },
+  "scripts": {
+    "dev": "parcel index.html",
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "prettier": "^2.0.5"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  }
+}

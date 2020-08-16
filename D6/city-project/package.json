@@ -1,0 +1,17 @@
+{
+  "name": "city-project",
+  "version": "1.0.0",
+  "description": "Looks up your city by zip code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "city"
+  ],
+  "author": "\"CF\"",
+  "license": "MIT",
+  "dependencies": {
+    "cities": "^2.0.0"
+  }
+}

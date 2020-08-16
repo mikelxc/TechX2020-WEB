@@ -1,0 +1,19 @@
+{
+  "name": "mui-org.material-ui.internal.use-fork-ref",
+  "version": "4.9.10",
+  "homepage": "https://bit.dev/mui-org/material-ui/internal/use-fork-ref",
+  "main": "dist/useForkRef.js",
+  "dependencies": {
+    "@bit/mui-org.material-ui.internal.set-ref": "4.9.10"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react@1.0.16"
+    }
+  }
+}

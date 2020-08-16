@@ -1,0 +1,17 @@
+{
+  "name": "mui-org.material-ui.internal.use-event-callback",
+  "version": "4.9.10",
+  "homepage": "https://bit.dev/mui-org/material-ui/internal/use-event-callback",
+  "main": "dist/useEventCallback.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react@1.0.16"
+    }
+  }
+}

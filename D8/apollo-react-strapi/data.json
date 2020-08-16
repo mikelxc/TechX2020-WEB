@@ -1,0 +1,376 @@
+[
+  {
+    "id": 1,
+    "classname": "Full-stack-class",
+    "startdate": "2020-08-06",
+    "enddate": "2020-08-17",
+    "created_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "updated_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "created_at": "2020-08-13T05:23:40.215Z",
+    "updated_at": "2020-08-14T07:03:55.142Z",
+    "image": [
+      {
+        "id": 1,
+        "name": "full stack.jpg",
+        "alternativeText": "",
+        "caption": "",
+        "width": 474,
+        "height": 315,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_full stack.jpg",
+            "hash": "thumbnail_full_stack_05d2fae296",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "width": 235,
+            "height": 156,
+            "size": 10.56,
+            "path": null,
+            "url": "/uploads/thumbnail_full_stack_05d2fae296.jpg"
+          }
+        },
+        "hash": "full_stack_05d2fae296",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 26.96,
+        "url": "/uploads/full_stack_05d2fae296.jpg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2020-08-13T05:22:43.431Z",
+        "updated_at": "2020-08-13T05:22:43.467Z"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "classname": "Intro2ML",
+    "startdate": "2020-08-06",
+    "enddate": "2020-08-15",
+    "created_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "updated_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "created_at": "2020-08-13T05:24:07.638Z",
+    "updated_at": "2020-08-14T07:03:47.516Z",
+    "image": [
+      {
+        "id": 2,
+        "name": "ML.jpg",
+        "alternativeText": "",
+        "caption": "",
+        "width": 474,
+        "height": 296,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_ML.jpg",
+            "hash": "thumbnail_ML_5f3f5d3f91",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "width": 245,
+            "height": 153,
+            "size": 12.08,
+            "path": null,
+            "url": "/uploads/thumbnail_ML_5f3f5d3f91.jpg"
+          }
+        },
+        "hash": "ML_5f3f5d3f91",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 33.73,
+        "url": "/uploads/ML_5f3f5d3f91.jpg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2020-08-13T05:25:32.174Z",
+        "updated_at": "2020-08-13T05:25:32.213Z"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "classname": "Deep Leaning Application",
+    "startdate": "2020-08-05",
+    "enddate": "2020-08-14",
+    "created_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "updated_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "created_at": "2020-08-14T06:47:18.736Z",
+    "updated_at": "2020-08-14T07:02:33.370Z",
+    "image": [
+      {
+        "id": 6,
+        "name": "MLvsDL.png",
+        "alternativeText": "",
+        "caption": "",
+        "width": 706,
+        "height": 347,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_MLvsDL.png",
+            "hash": "thumbnail_M_Lvs_DL_8ed4bdcafe",
+            "ext": ".png",
+            "mime": "image/png",
+            "width": 245,
+            "height": 120,
+            "size": 18.08,
+            "path": null,
+            "url": "/uploads/thumbnail_M_Lvs_DL_8ed4bdcafe.png"
+          },
+          "small": {
+            "name": "small_MLvsDL.png",
+            "hash": "small_M_Lvs_DL_8ed4bdcafe",
+            "ext": ".png",
+            "mime": "image/png",
+            "width": 500,
+            "height": 246,
+            "size": 45.94,
+            "path": null,
+            "url": "/uploads/small_M_Lvs_DL_8ed4bdcafe.png"
+          }
+        },
+        "hash": "M_Lvs_DL_8ed4bdcafe",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 21.56,
+        "url": "/uploads/M_Lvs_DL_8ed4bdcafe.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2020-08-14T06:46:54.083Z",
+        "updated_at": "2020-08-14T06:46:54.126Z"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "classname": "Architecture",
+    "startdate": "2020-08-06",
+    "enddate": "2020-08-17",
+    "created_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "updated_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "created_at": "2020-08-14T06:48:08.363Z",
+    "updated_at": "2020-08-14T07:15:23.657Z",
+    "image": [
+      {
+        "id": 10,
+        "name": "123.jpg",
+        "alternativeText": "",
+        "caption": "",
+        "width": 800,
+        "height": 533,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_123.jpg",
+            "hash": "thumbnail_123_3d8d281784",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "width": 234,
+            "height": 156,
+            "size": 6.43,
+            "path": null,
+            "url": "/uploads/thumbnail_123_3d8d281784.jpg"
+          },
+          "medium": {
+            "name": "medium_123.jpg",
+            "hash": "medium_123_3d8d281784",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "width": 750,
+            "height": 500,
+            "size": 39.78,
+            "path": null,
+            "url": "/uploads/medium_123_3d8d281784.jpg"
+          },
+          "small": {
+            "name": "small_123.jpg",
+            "hash": "small_123_3d8d281784",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "width": 500,
+            "height": 333,
+            "size": 21.98,
+            "path": null,
+            "url": "/uploads/small_123_3d8d281784.jpg"
+          }
+        },
+        "hash": "123_3d8d281784",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 43.03,
+        "url": "/uploads/123_3d8d281784.jpg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2020-08-14T07:15:12.782Z",
+        "updated_at": "2020-08-14T07:15:12.828Z"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "classname": "Bio-Info",
+    "startdate": "2020-08-07",
+    "enddate": "2020-08-17",
+    "created_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "updated_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "created_at": "2020-08-14T06:48:52.443Z",
+    "updated_at": "2020-08-14T07:02:20.592Z",
+    "image": [
+      {
+        "id": 9,
+        "name": "BioInfo.png",
+        "alternativeText": "",
+        "caption": "",
+        "width": 355,
+        "height": 355,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_BioInfo.png",
+            "hash": "thumbnail_Bio_Info_0b39949034",
+            "ext": ".png",
+            "mime": "image/png",
+            "width": 156,
+            "height": 156,
+            "size": 21.53,
+            "path": null,
+            "url": "/uploads/thumbnail_Bio_Info_0b39949034.png"
+          }
+        },
+        "hash": "Bio_Info_0b39949034",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 29.93,
+        "url": "/uploads/Bio_Info_0b39949034.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2020-08-14T06:47:08.059Z",
+        "updated_at": "2020-08-14T06:47:08.178Z"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "classname": "Deep Leaning Theory",
+    "startdate": "2020-08-05",
+    "enddate": "2020-08-08",
+    "created_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "updated_by": {
+      "id": 1,
+      "firstname": "Weike",
+      "lastname": "Fang",
+      "username": null
+    },
+    "created_at": "2020-08-14T06:49:12.989Z",
+    "updated_at": "2020-08-14T07:02:49.554Z",
+    "image": [
+      {
+        "id": 5,
+        "name": "deep-learning.jpg",
+        "alternativeText": "",
+        "caption": "",
+        "width": 535,
+        "height": 321,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_deep-learning.jpg",
+            "hash": "thumbnail_deep_learning_6446f328b6",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "width": 245,
+            "height": 147,
+            "size": 6.71,
+            "path": null,
+            "url": "/uploads/thumbnail_deep_learning_6446f328b6.jpg"
+          },
+          "small": {
+            "name": "small_deep-learning.jpg",
+            "hash": "small_deep_learning_6446f328b6",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "width": 500,
+            "height": 300,
+            "size": 23.76,
+            "path": null,
+            "url": "/uploads/small_deep_learning_6446f328b6.jpg"
+          }
+        },
+        "hash": "deep_learning_6446f328b6",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 28.59,
+        "url": "/uploads/deep_learning_6446f328b6.jpg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2020-08-14T06:46:53.990Z",
+        "updated_at": "2020-08-14T06:46:54.047Z"
+      }
+    ]
+  }
+]

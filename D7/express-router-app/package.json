@@ -1,0 +1,11 @@
+{
+  "name": "express-router-app",
+  "version": "1.0.0",
+  "description": "Use Express to create an app",
+  "main": "main.js",
+  "author": "Colin Fang",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

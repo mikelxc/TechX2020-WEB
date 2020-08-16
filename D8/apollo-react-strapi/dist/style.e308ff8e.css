@@ -1,0 +1,47 @@
+
+body{
+    background-color:navajowhite;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-left: 10%;
+}
+/* p {
+    background: rgb(139, 157, 187);
+    padding: 50px;
+    margin: 15px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    background-color: rgb(50, 61, 81);
+    padding: 25px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+h2 {
+    background-color: rgb(50, 61, 81);
+    padding: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+section {
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(50, 61, 81);
+    color: white;
+    font-family: verdana, sans-serif;
+    text-align: center;
+} */
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

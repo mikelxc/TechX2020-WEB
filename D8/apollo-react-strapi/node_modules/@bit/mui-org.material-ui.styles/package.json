@@ -1,0 +1,24 @@
+{
+  "name": "mui-org.material-ui.styles",
+  "version": "4.9.10",
+  "homepage": "https://bit.dev/mui-org/material-ui/styles",
+  "main": "dist/styles/index.js",
+  "dependencies": {
+    "@material-ui/styles": "^4.9.10",
+    "@material-ui/utils": "^4.9.6",
+    "@material-ui/system": "^4.9.10",
+    "@material-ui/types": "^5.0.1",
+    "@bit/mui-org.material-ui.internal.types": "4.9.10",
+    "@bit/mui-org.material-ui.colors": "4.9.10"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react@1.0.16"
+    }
+  }
+}

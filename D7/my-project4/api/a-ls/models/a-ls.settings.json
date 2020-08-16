@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "a_ls",
+  "info": {
+    "name": "ALs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "dob": {
+      "type": "date"
+    }
+  }
+}

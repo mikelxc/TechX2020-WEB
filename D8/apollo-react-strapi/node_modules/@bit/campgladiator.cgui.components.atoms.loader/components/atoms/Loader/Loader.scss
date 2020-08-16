@@ -1,0 +1,68 @@
+@import '../../../assets/styles/variables';
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0.6);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
+
+.cg-loader {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 34px;
+
+  &--white &__dot {
+    background-color: white;
+  }
+
+  &--primary &__dot {
+    background-color: $gladiator;
+  }
+
+  &--secondary &__dot {
+    background-color: $navy;
+  }
+
+  &--dark &__dot {
+    background-color: $pavement;
+  }
+
+  &--gray &__dot {
+    background-color: $dark-gray;
+  }
+
+  &--disabled &__dot {
+    background-color: $medium-gray;
+  }
+
+  &__dot {
+    height: 8px;
+    width: 8px;
+    background-color: $gladiator;
+    float: left;
+    animation: bounce 0.7s infinite;
+    border-radius: 50%;
+
+    & + & {
+      margin-left: 5px;
+    }
+
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+  }
+}
