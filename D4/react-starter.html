@@ -6,13 +6,40 @@
   </head>
   <body>
     <div id="react-container"></div>
-
+    <input type="button" value="下一个" onclick="next()">
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 
     <script type="text/babel">
       // JSX code here. Or link to separate JavaScript file that contains JSX.
+      let x=0;
+      function next()
+      {
+        let res;
+     fetch ("https://cat-fact.herokuapp.com/facts?animal_type=cat,horse")
+    .then(response => response.json())
+ .then(res => {
+    console.log(res);
+     console.log(res.all[x].type);
+     console.log(res.all[x].text);
+     console.log(res.all[x].upvotes);
+    //  console.log(res.all[0].userName.first+"·"+res.userName.last);
+
+   let re1=  React.createElement("h1", null, "type:"+res.all[x].type);
+   let re2=  React.createElement("h1", null, "upvotes:"+res.all[x].text);
+   let re3=  React.createElement("h1", null, "intro Text:"+res.all[x].upvotes);
+  //  let re4=  React.createElement("h1", null, res.all[0].userName);
+
+     ReactDOM.render([re1,re2,re3],document.getElementById("react-container"));
+     x++;
+     console.log("x的值是:"+x);
+ });
+    
+    //type，text，upvotes，userName：first，last
+      }
+
+      
     </script>
   </body>
 </html>
