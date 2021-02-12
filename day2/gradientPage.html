@@ -1,0 +1,51 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>Gradient Page</title>
+            <style>
+                body{
+                    text-align: center;
+                    margin-top: 300px;
+                    background: linear-gradient(#e66465, #f6b73c);
+                }
+                label {
+                    font: 1rem 'Fira Sans', sans-serif;
+                }
+                input {
+                    margin: .4rem;
+                }
+            </style>
+        </head>
+        <body id="gradient">
+            <div>
+                <input type="color" id="one" name="color1"
+                    value="#e66465">
+                <label for="color1">Color 1</label>
+            </div>
+            <div>
+                <input type="color" id="two" name="color2"
+                    value="#f6b73c">
+                <label for="color2">Color 2</label>
+            </div>
+            <script>
+                let color1 = document.getElementById("one");
+                let color1Value = color1.value;
+                color1.addEventListener("input", function() {
+                    color1 = document.getElementById("one");
+                    color1Value = color1.value;
+                    document.getElementById('gradient').style.setProperty('background', `linear-gradient(${color1Value}, ${color2Value})`);
+                },false);
+                let color2 = document.getElementById("two");
+                let color2Value = color2.value;
+                color2.addEventListener("input", function() {
+                    color2 = document.getElementById("two");
+                    color2Value = color2.value;
+                    document.getElementById('gradient').style.setProperty('background', `linear-gradient(${color1Value}, ${color2Value})`);
+                },false);
+            </script>
+            <br>
+            <button class="reset" type="button">
+                <a href="gradientPage.html">Reset</a>
+            </button>
+        </body>
+    </html>
