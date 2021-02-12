@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang = 'en-US'>
+    <head></head>
+
+<style>
+ 
+
+    body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+        }
+ 
+
+    .header {
+                padding: 80px;
+                text-align: center;
+                background: #1abc9c;
+                color: white;
+            }
+ 
+    .header h1 {
+                font-size: 40px;
+            }
+ 
+
+    .navbar {
+                overflow: hidden;
+                background-color: #333;
+            }
+ 
+
+    .navbar a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 20px;
+            }
+ 
+
+    .navbar a.right {
+                float: right;
+            }
+ 
+
+    .navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+            }
+ 
+
+ 
+    .one {
+            background-color: #f1f1f1;
+            padding: 20px;
+            }
+ 
+
+    .two {   
+            background-color: white;
+            padding: 20px;
+        }
+    
+ 
+    .img {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+            }
+
+    .footer {
+                padding: 20px;
+                text-align: center;
+                background: #aaaaaa;
+            }
+ 
+/* responsive*/
+    @media screen and (max-width: 700px) {
+        .row {   
+                flex-direction: column;
+            }
+    }   
+ 
+
+    @media screen and (max-width: 400px) {
+        .navbar a {
+                    float: none;
+                    width: 100%;
+                }
+    }
+</style>
+<body>
+    <div class="header">
+        <h1>Welcome</h1>
+        <p>Hi, I'm Luna Chen.</p>
+    </div>
+   
+  <div class="navbar">
+    <a href="#academics">Academics</a>
+    <a id = "idk" href="#activities">Activities</a>
+    <a href="#famFriends">Family and Friends</a>
+    <a href="#contact" class="right">Contact</a>
+  </div>
+   
+    <div class="one">
+        <h2>About me</h2>
+        <h5>My photo</h5>
+        <div class="img" style="height:200px;width: 200px;">
+            <img alt="Luna's photo" src = "data:image/jpeg;base64,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" width="200" height="200">
+        </div>
+        <p class="academics">Hi, I'm a first year Comp Sci & Gender Studies student at University of Notre Dame. I speak English, Mandarin, French and Korean. I used to speak Tibetan, but now I completely forget.</p>
+        <p class="activities">I am the Public Relations Manager of Chinese Culture Society. In my leisure time I enjoy reading and lakeside walks with my friends.</p>
+        <p>I also watch tons of movies. My recent favorite is PRIDE starring Ben Schnetzer. My favorite author is between Noam Chomsky and Karl Marx. </p>
+        <p>Although I don't 100% agree with either of them, I found their thoughts exciting and admire their great visions.</p>
+        <div class="fakeimg" style="height:60px;">insert photo</div><br>
+        <div class="fakeimg" style="height:60px;">insert photo</div><br>
+        <div class="fakeimg" style="height:60px;">insert photo</div>
+    </div>
+
+    <div>
+        <h2>Hiiii</h2>
+        <h5>Alright I'm tired</h5>
+        <div class="fakeimg" style="height:200px;">lmfao</div>
+        <div style ='float:left;width: 30%;height: 245px;background-color: #1abc9c70;padding: 20px;'>
+            <ul style ='list-style-type:disc; padding: 60px;'>
+                <li style = "font-family:Georgia, 'Times New Roman', Times, serif"><a href="#">I don't know</a></li>
+                <li style = "font-family:Georgia, 'Times New Roman', Times, serif"><a href="#">I still don't</a></li>
+                <li style = "font-family:Georgia, 'Times New Roman', Times, serif"><a href="#">lmfao</a></li>
+            </ul>
+        </div>
+        <div style ='float:left;padding: 20px;width: 64.6%;height:245px;background-color: #f1f1f1;font-family: Georgia, "Times New Roman", Times, serif'>
+            <h3>Academics and Leadership</h3>
+            <p>Hi, I'm a first year Comp Sci & Gender Studies student at University of Notre Dame. I speak English, Mandarin, French and Korean.</p>
+            <p>I am the Public Relations Manager of Chinese Culture Society. In my leisure time I enjoy reading and lakeside walks with my friends.</p>
+            <p>I also watch tons of movies. My recent favorite is PRIDE starring Ben Schnetzer. My favorite author is between Noam Chomsky and Karl Marx. </p>
+            <p>Although I don't 100% agree with either of them, I found their thoughts exciting and admire their great visions.</p>
+        </div>
+
+        
+        <div class="footer",width=100%>
+            <p>lchen9@nd.edu</p>
+        </div>
+  
+   
+  
+    </body>
+    
+  </html>
+
+
+  <!--Optional Javascript-->
+  <script>
+      console.log(triple(3))
+      function triple(x){
+          y = 3*x;
+          return y;
+      }
+      let link = document.getElementById("idk")
+      console.log(link);
+      function move(element,top,left){
+          element.style.top = top +"px"
+          element.style.left = left + "px"
+      }
+  </script>
