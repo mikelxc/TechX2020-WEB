@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- created by TeaPP -->
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        
+        <title>color</Link></title>
+        <script>
+          
+          function reset(){ 
+                        document.getElementById("color1").value = "#ff0000";
+                        document.getElementById("color2").value = "#ffff00";
+                        generate();
+                      };
+           function generate(){
+                         let c1 = document.getElementById("color1").value;
+                         let c2 = document.getElementById("color2").value;
+                         document.getElementById("show").style.background= 'linear-gradient(to left,' + c1 + ',' + c2 + ')';
+                         };
+                        
+        </script>
+    </head>
+    <body onload="generate()">
+      
+                       <h5>Color Gradients:</h5>
+                       <input type="color" id="color1" name="one" value="#ff0000" oninput="generate()" >
+                       <input type="color" id="color2" name="two" value="#ffff00" oninput="generate()">
+                       <button id = "reset" onclick=reset()>Reset to default</button>
+                       <div id="show" style="height:500px;" >
+       </div>   </body>
+</html>
